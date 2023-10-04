@@ -10,12 +10,13 @@
         echo "Error: ".$connn->connect_error . PHP_EOL;
         die();
     }
-    //$rfid=$_POST["uid"];
+    $rfid=$_POST["uid"];
     //$password=$_POST["contra"];
     //$query = 'SELECT * FROM lista';
     //echo $query;
     //$lista = mysqli_query($conn,$query);
     //echo "Ejemplo";
+    echo $rfid;
     foreach ($alumnosLista as $alumno){
         echo $alumno['uid'];
     }
