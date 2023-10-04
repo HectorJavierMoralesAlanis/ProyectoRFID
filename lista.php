@@ -7,7 +7,7 @@
     }
     $rfid=$_POST["uid"];
     //$password=$_POST["contra"];
-    $query = "SELECT 'uid' from lista";
+    $query = 'SELECT * FROM lista';
     //echo $query;
     $lista = mysqli_query($conn,$query);
     //echo "Ejemplo";
