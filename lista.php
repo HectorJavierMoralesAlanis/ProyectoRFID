@@ -5,7 +5,6 @@
         echo "Error: ".$connn->connect_error . PHP_EOL;
         die();
     }
-
     $rfid=$_POST["uid"];
     //$password=$_POST["contra"];
     $query = "SELECT * from lista";
