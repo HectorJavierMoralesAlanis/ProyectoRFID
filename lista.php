@@ -1,5 +1,5 @@
 <?php
-    $con = new mysqli("localhost","admin","","pase_lista");
+    $con = new mysqli("localhost","admin","","lista");
 
     if ($con->connect_error){
         echo "Error: ".$connn->connect_error . PHP_EOL;
@@ -10,7 +10,7 @@
     //$password=$_POST["contra"];
 
     $query = "SELECT * from lista";
-
+    echo $query;
     $lista = query($query);
 
     if($lista['uid'] === $rfid){
