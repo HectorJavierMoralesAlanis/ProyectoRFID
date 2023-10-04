@@ -16,7 +16,7 @@
     //echo $query;
     //$lista = mysqli_query($conn,$query);
     //echo "Ejemplo";
-    foreach ($alumnosListas as $alumno){
+    foreach ($alumnosLista as $alumno){
         echo $alumno['uid'];
     }
     /*if($lista['uid'] === $rfid){
