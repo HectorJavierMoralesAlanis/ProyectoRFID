@@ -8,7 +8,6 @@
 
     $rfid=$_POST["uid"];
     //$password=$_POST["contra"];
-
     $query = "SELECT * from lista";
     echo $query;
     $lista = query($query);
