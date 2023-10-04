@@ -8,12 +8,12 @@
     $rfid=$_POST["uid"];
     //$password=$_POST["contra"];
     $query = "SELECT * from lista";
-    echo $query;
+    //echo $query;
     $lista = $con->query($query);
-    echo "Ejemplo";
-    echo $lista;
+    //echo "Ejemplo";
+    //echo $lista;
     if($lista['uid'] === $rfid){
-        echo "Ingresado";
+        echo "Ingresado".PHP_EOL;
     }else{
         echo "Error: " . $conn->error;
     }
