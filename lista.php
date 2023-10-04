@@ -17,7 +17,7 @@
     //$lista = mysqli_query($conn,$query);
     //echo "Ejemplo";
     foreach ($alumnosListas as $alumno){
-        echo $alumno;
+        echo $alumno['uid'];
     }
     /*if($lista['uid'] === $rfid){
         echo "Ingresado".PHP_EOL;
@@ -25,5 +25,5 @@
         echo "Error: " . $conn->error;
     }
     $conn->close();*/
-    
+
 ?>
