@@ -19,12 +19,13 @@
     echo $rfid;
     foreach ($alumnosLista as $alumno){
         echo $alumno['uid'];
+    
+        if($alumno['uid'] === $rfid){
+            echo "Ingresado";
+        }else{
+            echo "Error: ";
+        }
+    /*$conn->close();*/
     }
-    /*if($lista['uid'] === $rfid){
-        echo "Ingresado".PHP_EOL;
-    }else{
-        echo "Error: " . $conn->error;
-    }
-    $conn->close();*/
 
 ?>
