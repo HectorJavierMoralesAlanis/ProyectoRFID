@@ -11,9 +11,9 @@
     $query = "SELECT * from lista";
     echo $query;
     $lista = query($query);
-
+    echo $lista;
     if($lista['uid'] === $rfid){
-        echo "Entro".PHP_EOL;
+        echo "Ingresado";
     }else{
         echo "Error: " . $conn->error;
     }
