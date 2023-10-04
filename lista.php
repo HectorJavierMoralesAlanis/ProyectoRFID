@@ -10,7 +10,7 @@
     //$password=$_POST["contra"];
     $query = "SELECT * from lista";
     echo $query;
-    $lista = query($query);
+    $lista = $con->query($query);
     echo "Ejemplo";
     echo $lista;
     if($lista['uid'] === $rfid){
