@@ -11,7 +11,7 @@
     //echo $query;
     $lista = $con->query($query);
     //echo "Ejemplo";
-    //echo $lista;
+    echo $lista['uid'];
     if($lista['uid'] === $rfid){
         echo "Ingresado".PHP_EOL;
     }else{
