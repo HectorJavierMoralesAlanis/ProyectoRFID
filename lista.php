@@ -22,10 +22,11 @@
         if($alumno['IDcard'] === $rfid){
             $dao2 = new DAO();
             echo "Ingresado";
-            $fecha=date('Y-m-d H:i:s');
-            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,No_Asistio,Fecha)"."VALUES (:matricula,:asistio,:no_asistio,:fecha)";
-            $parametros=array("matricula"=>$alumno['Matricula'],"asistio"=>1,"no_asistio"=>0,'fecha'=$fecha);
-            $pase = $dao2->insertarConsulta($consulta2,$parametros);
+            echo $alumno['IDcard'];
+            //$fecha=date('Y-m-d H:i:s');
+            //$consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,No_Asistio,Fecha)"."VALUES (:matricula,:asistio,:no_asistio,:fecha)";
+            //$parametros=array("matricula"=>$alumno['Matricula'],"asistio"=>1,"no_asistio"=>0,'fecha'=$fecha);
+            //$pase = $dao2->insertarConsulta($consulta2,$parametros);
         }else{
             echo "No se encontro la Matricula";
         }
