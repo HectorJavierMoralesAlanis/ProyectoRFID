@@ -12,7 +12,7 @@
     //$password=$_POST["password"];
     //echo $alumnosLista;
     foreach ($alumnosLista as $alumno){
-        //echo $rfid;
+        echo $rfid;
         //echo $alumno['Contra'];
         if($alumno['IDcard'] === $rfid){
             $dao2 = new DAO();
@@ -27,6 +27,7 @@
 
             $pase = $dao2->insertarConsulta($consulta2,$parametros);
             break;
+            //Se cambio la forma de verificar
         }else if($alumno['Contra']===$rfid){
             $dao2 = new DAO();
             echo "Ingresado";
