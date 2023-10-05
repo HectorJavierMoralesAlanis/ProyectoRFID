@@ -13,6 +13,7 @@
     //echo $alumnosLista;
     int $x=0;
     foreach ($alumnosLista as $alumno){
+        $x=$x+1;
         //echo $rfid;
         //echo $alumno['Contra'];
         if($alumno['IDcard'] === $rfid || $alumno['Contra'] === $rfid){
@@ -28,9 +29,9 @@
 
             $pase = $dao2->insertarConsulta($consulta2,$parametros);
             break;
-        }else if($x == count($alumno)){
+        }else if($x < count($alumno)){
             echo "No se encontro la Matricula";
         }
-        $x=$x+1
+        
     }
 ?>
