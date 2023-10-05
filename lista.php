@@ -1,5 +1,5 @@
 <?php
-    //$conn = mysqli_connect("localhost","admin","587e608a4d7c61b1a289769b4f0eed9f2ba5e0edd903e117","listas");
+
     include ('DAO.php');
     $dao = new DAO();
     $consulta1 = "SELECT * FROM Alumnos";
