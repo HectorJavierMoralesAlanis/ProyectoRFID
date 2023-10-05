@@ -10,10 +10,12 @@
         die();
     }
     $rfid=$_POST["uid"];
+    $password=$_POST["password"];
     echo $alumnosLista;
     foreach ($alumnosLista as $alumno){
         echo $alumno['IDcard'];
-        if($alumno['IDcard'] === $rfid){
+        echo $alumno['Contraseña'];
+        if($alumno['IDcard'] === $rfid or $alumno['Contraseña'] === $password){
             $dao2 = new DAO();
             //echo "Ingresado";
             $matricula=$alumno['Matricula'];
