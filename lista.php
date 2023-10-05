@@ -14,7 +14,7 @@
     foreach ($alumnosLista as $alumno){
         //echo $alumno['IDcard'];
         //echo $alumno['Contraseña'];
-        if($alumno['IDcard'] === $rfid){
+        if($alumno['IDcard'] === $rfid || $alumno['Contra'] === $rfid){
             $dao2 = new DAO();
             echo "Ingresado";
             $matricula=$alumno['Matricula'];
