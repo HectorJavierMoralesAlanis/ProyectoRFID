@@ -11,9 +11,10 @@
     $rfid=$_POST["uid"];
     //$password=$_POST["password"];
     //echo $alumnosLista;
+    int $x=0;
     foreach ($alumnosLista as $alumno){
-        echo $rfid;
-        echo $alumno['Contra'];
+        //echo $rfid;
+        //echo $alumno['Contra'];
         if($alumno['IDcard'] === $rfid || $alumno['Contra'] === $rfid){
             $dao2 = new DAO();
             echo "Ingresado";
@@ -27,8 +28,9 @@
 
             $pase = $dao2->insertarConsulta($consulta2,$parametros);
             break;
-        }else{
+        }else if($x == count($alumno)){
             echo "No se encontro la Matricula";
         }
+        $x=$x+1
     }
 ?>
