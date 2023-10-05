@@ -11,6 +11,7 @@
     $rfid=$_POST["uid"];
     //$password=$_POST["password"];
     //echo $alumnosLista;
+    $x=0;
     foreach ($alumnosLista as $alumno){
         /*
         echo "\ncontra mandada ";
@@ -46,7 +47,10 @@
             $pase = $dao2->insertarConsulta($consulta2,$parametros);
             break;
         }else{
-            echo "No se encontro la Matricula";
+            $x=$x+1;
+            if ( $x ===count($alumnosListas)){
+                echo "No se encontro la Matricula";
+            }
         }
         
     }
