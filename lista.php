@@ -9,6 +9,7 @@
         echo "Error: ".$connn->connect_error . PHP_EOL;
         die();
     }
+    
     $rfid=$_POST["uid"];
     echo $alumnosLista;
     foreach ($alumnosLista as $alumno){
