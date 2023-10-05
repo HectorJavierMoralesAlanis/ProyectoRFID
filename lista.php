@@ -12,13 +12,13 @@
     $password=$_POST["password"];
     echo $alumnosLista;
     foreach ($alumnosLista as $alumno){
-        echo $alumno['IDcard'];
+        //echo $alumno['IDcard'];
         echo $alumno['Contraseña'];
         if($alumno['IDcard'] === $rfid or $alumno['Contraseña'] === $password){
             $dao2 = new DAO();
             //echo "Ingresado";
             $matricula=$alumno['Matricula'];
-            echo $matricula;
+            //echo $matricula;
             $fecha=date('Y-m-d H:i:s');
             //echo $fecha;
             $asistio=1;
