@@ -27,9 +27,9 @@
             $fecha=date('Y-m-d H:i:s');
             //echo $fecha;
             $asistio=1;
-            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha)"."VALUES (:matricula,:asistio,:fecha)";
+            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha) VALUES (:matricula,:asistio,:fecha)";
 
-            $parametros=array("matricula"=>"$matricula","asistio"=>"$asistio","fecha"="$fecha");
+            $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=$fecha);
 
             $pase = $dao2->insertarConsulta($consulta2,$parametros);
         }else{
