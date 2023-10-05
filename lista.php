@@ -48,9 +48,9 @@
             break;
         }else{
             $x=$x+1;
-            if ( $x ===count($alumnosListas)){
-                echo "No se encontro la Matricula";
-            }
+            //if ( $x ===count($alumnosListas)){
+            //    echo "No se encontro la Matricula";
+            //}
         }
         
     }
