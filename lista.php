@@ -10,11 +10,6 @@
         die();
     }
     $rfid=$_POST["uid"];
-    //$password=$_POST["contra"];
-    //$query = 'SELECT * FROM lista';
-    //echo $query;
-    //$lista = mysqli_query($conn,$query);
-    //echo "Ejemplo";
     echo $alumnosLista;
     foreach ($alumnosLista as $alumno){
         echo $alumno['IDcard'];
