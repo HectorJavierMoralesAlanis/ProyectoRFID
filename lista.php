@@ -15,7 +15,7 @@
         //echo $alumno['IDcard'];
         //echo $alumno['Contraseña'];
         //echo $password;
-        if($alumno['IDcard'] === $rfid or $alumno['Contraseña'] === $password){
+        if($alumno['IDcard'] === $rfid or $alumno['Contraseña'] === $rfid){
             $dao2 = new DAO();
             echo "Ingresado";
             $matricula=$alumno['Matricula'];
