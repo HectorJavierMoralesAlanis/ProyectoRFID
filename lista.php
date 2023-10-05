@@ -1,5 +1,4 @@
 <?php
-
     include ('DAO.php');
     $dao = new DAO();
     $consulta1 = "SELECT * FROM Alumnos";
