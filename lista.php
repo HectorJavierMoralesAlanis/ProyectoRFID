@@ -16,10 +16,10 @@
     //echo $query;
     //$lista = mysqli_query($conn,$query);
     //echo "Ejemplo";
-    //echo $rfid;
+    echo $alumnosLista;
 
     foreach ($alumnosLista as $alumno){
-        echo $alumno['uid'];
+        echo $alumno['IDcard'];
     
         if($alumno['IDcard'] === $rfid){
             echo "Ingresado";
