@@ -31,5 +31,6 @@
         }else{
             echo "No se encontro la Matricula";
         }
+        
     }
 ?>
