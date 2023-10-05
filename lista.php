@@ -27,7 +27,7 @@
 
             $pase = $dao2->insertarConsulta($consulta2,$parametros);
         }else{
-            echo "No se encontro la Matricula";
+            //echo "No se encontro la Matricula";
         }
     }
 ?>
