@@ -18,7 +18,7 @@
             $dao2 = new DAO();
             echo "Ingresado";
             $matricula=$alumno['Matricula'];
-            //echo $matricula;
+            echo $rfid;
             $fecha=date('Y-m-d H:i:s');
             //echo $fecha;
             $asistio=1;
