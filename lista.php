@@ -30,7 +30,7 @@
 
             $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=$fecha);
 
-            $pase = $dao2->insertarConsulta($consulta2,$parametros);
+            $pase = $dao->insertarConsulta($consulta2,$parametros);
         }else{
             echo "No se encontro la Matricula";
         }
