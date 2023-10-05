@@ -29,7 +29,7 @@
 
             $pase = $dao2->insertarConsulta($consulta2,$parametros);
             break;
-        }else if($x < count($alumno)){
+        }else if($x == count($alumno)){
             echo "No se encontro la Matricula";
         }
         
