@@ -10,7 +10,7 @@
             //try and cath
             try{
                 //Se guardara la conexion a la base de datos
-                $this->conexion = new PDO("mysql:host=localhost;dbname=lista","admin","587e608a4d7c61b1a289769b4f0eed9f2ba5e0edd903e117");
+                $this->conexion = new PDO("mysql:host=localhost;dbname=listas","admin","587e608a4d7c61b1a289769b4f0eed9f2ba5e0edd903e117");
                 
             }catch (Exception $ex){
                 //Mensajen de error
