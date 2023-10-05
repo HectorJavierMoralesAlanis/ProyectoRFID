@@ -18,7 +18,6 @@
     echo $alumnosLista;
     foreach ($alumnosLista as $alumno){
         echo $alumno['IDcard'];
-    
         if($alumno['IDcard'] === $rfid){
             $dao2 = new DAO();
             //echo "Ingresado";
