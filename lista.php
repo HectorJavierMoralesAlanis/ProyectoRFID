@@ -13,7 +13,7 @@
     //echo $alumnosLista;
     foreach ($alumnosLista as $alumno){
         echo $rfid;
-        //echo $alumno['Contra'];
+        echo $alumno['Contra'];
         if($alumno['IDcard'] === $rfid){
             $dao2 = new DAO();
             echo "Ingresado";
@@ -31,6 +31,7 @@
         }else if($alumno['Contra']===$rfid){
             $dao2 = new DAO();
             echo "Ingresado";
+            
             $matricula=$alumno['Matricula'];
             //echo $matricula;
             $fecha=date('Y-m-d H:i:s');
