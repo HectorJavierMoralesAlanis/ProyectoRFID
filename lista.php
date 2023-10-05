@@ -17,7 +17,6 @@
     //$lista = mysqli_query($conn,$query);
     //echo "Ejemplo";
     echo $alumnosLista;
-
     foreach ($alumnosLista as $alumno){
         echo $alumno['IDcard'];
     
