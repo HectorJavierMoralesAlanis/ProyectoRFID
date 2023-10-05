@@ -23,7 +23,7 @@
             $asistio=1;
             $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha)"."VALUES (:matricula,:asistio,:fecha)";
 
-            //$parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=$fecha);
+            $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=$fecha);
 
             //$pase = $dao->insertarConsulta($consulta2,$parametros);
         }else{
