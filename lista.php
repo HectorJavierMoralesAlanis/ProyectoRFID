@@ -4,7 +4,7 @@
     $dao = new DAO();
     $consulta1 = "SELECT * FROM Alumnos";
     $alumnosLista = $dao->ejecutarConsulta($consulta1);
-    $dao2 = new DAO();
+    //$dao2 = new DAO();
 
     if ($conn->connect_error){
         echo "Error: ".$connn->connect_error . PHP_EOL;
@@ -23,10 +23,10 @@
     
         if($alumno['IDcard'] === $rfid){
             echo "Ingresado";
-            $fecha=date('Y-m-d H:i:s');
-            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,No_Asistio,Fecha)"."VALUES (:matricula,:asistio,:no_asistio,:fecha)";
-            $parametros=array("matricula"=>$alumno['Matricula'],"asistio"=>1,"no_asistio"=>0,'fecha'=$fecha);
-            $pase = $dao2->ejecutarConsulta($consulta2,$parametros);
+            //$fecha=date('Y-m-d H:i:s');
+            //$consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,No_Asistio,Fecha)"."VALUES (:matricula,:asistio,:no_asistio,:fecha)";
+            //$parametros=array("matricula"=>$alumno['Matricula'],"asistio"=>1,"no_asistio"=>0,'fecha'=$fecha);
+            //$pase = $dao2->ejecutarConsulta($consulta2,$parametros);
         }else{
             echo "No se encontro la Matricula";
         }
