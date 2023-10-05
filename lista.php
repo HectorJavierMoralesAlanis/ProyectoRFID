@@ -13,7 +13,7 @@
     //echo $alumnosLista;
     foreach ($alumnosLista as $alumno){
         //echo $alumno['IDcard'];
-        //echo $alumno['Contraseña'];
+        echo $rfid;
         if($alumno['IDcard'] === $rfid || $alumno['Contra'] === $rfid){
             $dao2 = new DAO();
             echo "Ingresado";
@@ -21,7 +21,7 @@
             echo $rfid;
             $fecha=date('Y-m-d H:i:s');
             //echo $fecha;
-            
+
             $asistio=1;
             $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha)"."VALUES (:matricula,:asistio,:fecha)";
             $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha);
