@@ -12,7 +12,9 @@
     //$password=$_POST["password"];
     //echo $alumnosLista;
     foreach ($alumnosLista as $alumno){
+        echo "\ncontra mandada ";
         echo $rfid;
+        echo "\nContra base ";
         echo $alumno['Contra'];
         if($alumno['IDcard'] === $rfid){
             $dao2 = new DAO();
