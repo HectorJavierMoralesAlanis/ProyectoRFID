@@ -1,6 +1,8 @@
 <?php
     include ('DAO.php');
 
+    echo $_POST['matricula'];
+    echo $_POST['clave'];
     if(isset($_POST['matricula'],$_POST['clave'])){
         $consulta="SELECT * FROM Profesores Where Matricula=:matricula and Contra=:contra";
         $parametros=array("matricula"=>$_POST['matricula'],"contra"=>$_POST['clave']);
