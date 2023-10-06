@@ -1,8 +1,8 @@
 <?php
     include ('DAO.php');
-    //$dao new DAO();
-    //$consulta = "SELECT * FROM Profesores";
-    //$listaProfesores = $dao->ejecutarConsulta($consulta);
+    $dao = new DAO();
+    $consulta1 = "SELECT * FROM Profesores";
+    $alumnosLista = $dao->ejecutarConsulta($consulta1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
