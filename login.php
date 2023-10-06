@@ -43,7 +43,7 @@
 
                     <!-- input de Contraseña -->
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="clave" placeholder="clave">
+                        <input type="password" class="form-control" id="clave" placeholder="clave" name="clave">
                         <label for="floatingPassword">Contraseña</label>
                     </div>
 
