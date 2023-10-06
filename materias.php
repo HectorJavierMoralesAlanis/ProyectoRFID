@@ -1,8 +1,8 @@
 <?php 
-    include('DAO.php');
+    include ('DAO.php');
     $dao = new DAO();
     $consulta="SELECT * FROM Clases Where matriculaMaestro=:matricula";
-    $parametros=array("matricula"=>$_POST['matricula'])
+    $parametros=array("matricula"=>$_POST['matricula']);
     $clases=$dao->insertarConsulta($consulta,$parametros);
 ?>
 <!DOCTYPE html>
