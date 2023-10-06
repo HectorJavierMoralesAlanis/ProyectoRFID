@@ -3,6 +3,7 @@
     $dao = new DAO();
     $consulta1 = "SELECT * FROM Profesores";
     $alumnosLista = $dao->ejecutarConsulta($consulta1);
+    echo $_POST['matricula']
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,20 +21,20 @@
             </div>
 
             <div class="col-12 col-md-6 h-100 justify-content-center align-content-center flex-wrap d-flex">
-                <form class="w-75">
+                <form class="w-75" method="POST">
                     <div class="d-flex my-4">
                         <h5 class="text-center fw-bold mb-0">Bienvenidos</h5>
                     </div>
 
                     <!-- input de Usuario -->
                     <div class="form-floating mb-4">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="User" data-bind="value: user().username">
-                        <label for="floatingInput">Usuario</label>
+                        <input type="text" class="form-control" id="matricula" name="matricula">
+                        <label for="floatingInput">Matricula</label>
                     </div>
 
                     <!-- input de Contraseña -->
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" data-bind="value: user().password">
+                        <input type="password" class="form-control" id="clave" placeholder="clave">
                         <label for="floatingPassword">Contraseña</label>
                     </div>
 
