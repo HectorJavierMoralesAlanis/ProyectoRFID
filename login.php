@@ -7,7 +7,7 @@
         $parametros=array("matricula"=>$_POST['matricula'],"contra"=>$_POST['clave']);
         $reusltados=$dao->insertarConsulta($consulta,$parametros);
         if($resultados>=0){
-            header("Location: http://134.122.22.100/dahs.php?matricula=$matricula");
+            header("Location: http://134.122.22.100/materias.php?matricula=$matricula");
         }else{
             echo "error";
         }
