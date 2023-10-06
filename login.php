@@ -21,7 +21,7 @@
             </div>
 
             <div class="col-12 col-md-6 h-100 justify-content-center align-content-center flex-wrap d-flex">
-                <form class="w-75" method="POST">
+                <form class="w-75" method="POST" action="login.php">
                     <div class="d-flex my-4">
                         <h5 class="text-center fw-bold mb-0">Bienvenidos</h5>
                     </div>
@@ -39,7 +39,7 @@
                     </div>
 
                     <div class="d-md-block d-grid text-end mt-4 pt-2">
-                        <button type="button" class="btn btn-primary" style="padding-left: 2.5rem; padding-right: 2.5rem" data-bind="click: login">
+                        <button type="submit" class="btn btn-primary" style="padding-left: 2.5rem; padding-right: 2.5rem" data-bind="click: login">
                             Aceptar
                         </button>
                     </div>
