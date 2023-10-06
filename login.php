@@ -4,6 +4,8 @@
     echo $_POST['matricula'];
     echo $_POST['clave'];
     if(isset($_POST['matricula'],$_POST['clave'])){
+        echo "Si entro";
+        $dao = new DAO();
         $consulta="SELECT * FROM Profesores Where Matricula=:matricula and Contra=:contra";
         $parametros=array("matricula"=>$_POST['matricula'],"contra"=>$_POST['clave']);
         $reusltados=$dao->insertarConsulta($consulta,$parametros);
