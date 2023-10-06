@@ -1,16 +1,12 @@
 <?php
     include ('DAO.php');
-
-    echo $_POST['matricula'];
-    echo $_POST['clave'];
     if(isset($_POST['matricula'],$_POST['clave'])){
-        echo "Si entro";
         $dao = new DAO();
         $consulta="SELECT * FROM Profesores Where Matricula=:matricula and Contra=:contra";
         $parametros=array("matricula"=>$_POST['matricula'],"contra"=>$_POST['clave']);
         $reusltados=$dao->insertarConsulta($consulta,$parametros);
         if($resultados>=0){
-            header("Location: http://134.122.22.100/dahs.php");
+            header("Location: http://134.122.22.100/dahs.php?matricula=$_POST['matricula]");
         }else{
             echo "error";
         }
