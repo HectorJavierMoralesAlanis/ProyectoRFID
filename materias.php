@@ -90,9 +90,9 @@
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
                                   <?php foreach ($clases as $clase) { ?>
                                   <tr>
-                                      <!--<td><?php echo $clase['ID']; ?></td>
+                                      <td><?php echo $clase['ID']; ?></td>
                                       <td><?php echo $clase['Materia']; ?></td>
-                                      <td class="align-middle"><a href="./dahs.php?id=<?php echo $clase['matriculaMaestro']?>" method="POST" class="btn btn-info btn-block btn-sm">Ingresar</a></td>-->
+                                      <td class="align-middle"><a href="./dahs.php?id=<?php echo $clase['matriculaMaestro']?>" method="POST" class="btn btn-info btn-block btn-sm">Ingresar</a></td>
                                   </tr>
                                   <?php }?>
                               </table>
