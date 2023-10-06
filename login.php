@@ -1,9 +1,16 @@
 <?php
     include ('DAO.php');
-    $dao = new DAO();
-    $consulta1 = "SELECT * FROM Profesores";
-    $alumnosLista = $dao->ejecutarConsulta($consulta1);
-    echo $_POST['matricula']
+
+    if(isset($_POST['matricula'],$_POST['clave'])){
+        $consulta="SELECT * FROM Profesores Where Matricula and Contra";
+        $parametros=array("matricula"=>$_POST['matricula'],"contra"=>$_POST['clave']);
+        $reusltados=$dao->insertarConsulta($consulta,$parametros);
+        if($resultados>=0){
+            header("Location: http://134.122.22.100/Maestro/login.php");
+        }else{
+            echo "error";
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
