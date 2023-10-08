@@ -9,6 +9,7 @@
     $aux=0
     foreach($alumnos as $id){
         $arreglo[$aux]=$id['Matricula'];
+        echo $arreglo[$aux];
         $aux=$aux+1;
     }
 
