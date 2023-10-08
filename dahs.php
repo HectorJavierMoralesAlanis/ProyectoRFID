@@ -75,7 +75,7 @@
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: <?php echo json_encode($arreglo,JSON_NUMERIC_CHECK);?>
+      labels: <?php echo $arreglo;?>
       datasets: [{
         label: '# of Votes',
         data: [12, 19, 3, 5, 2, 3],
