@@ -26,6 +26,14 @@
             height: 300px;
             border: 1px solid #ccc;
         }
+        .barra {
+            background-color: blue;
+            height: 30px;
+            margin-bottom: 10px;
+            color: white;
+            text-align: center;
+            line-height: 30px;
+        }
     </style>
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
@@ -69,7 +77,7 @@
                           <h1>Gráfico de Ventas por Mes</h1>
                         <div class="grafico">
                             <?php foreach ($datos as $dato): ?>
-                                <div style="width: <?= $dato[1] ?>px; background-color: blue; height: 30px; margin-bottom: 10px;">
+                                <div class="barra" style="width: <?= $dato[1] ?>px;">
                                     <?= $dato[0] ?>
                                 </div>
                             <?php endforeach; ?>
