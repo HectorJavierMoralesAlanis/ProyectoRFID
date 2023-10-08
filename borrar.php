@@ -22,7 +22,7 @@
 
     $resultados = $dao->insertarConsulta($consulta,$parametros);
 
-    if($resutlados>=0){
+    if($resultados>=0){
         foreach($clases as $id){
             header("Location: http://134.122.22.100/dahs.php?id=$id['id']");
         }
