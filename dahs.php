@@ -68,13 +68,12 @@
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        <?php foreach ($alumnos as $alumno){?>
-        labels: [<?php echo $alumno['Matricula']?>]<?php }?>,
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            borderWidth: 1
-        }]
+      labels: <?php foreach($alumnos as $alumno){?>["<?php echo alumno['Matricula'];?>"]<?php } ?>,
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
     },
     options: {
       scales: {
@@ -84,5 +83,6 @@
       }
     }
   });
+  const url = ;
 </script>
 </html>
