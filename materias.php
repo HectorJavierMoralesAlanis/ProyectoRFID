@@ -4,7 +4,7 @@
     $consulta="SELECT * FROM Clases Where matriculaMaestro=:matricula";
     $parametros=array("matricula"=>$_POST['matricula']);
     $clases=$dao->ejecutarConsulta($consulta,$parametros);
-    
+    echo $clases;
 ?>
 <!DOCTYPE html>
 <html lang="en">
