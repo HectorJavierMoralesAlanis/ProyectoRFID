@@ -5,6 +5,12 @@
     $consulta = "SELECT * FROM Pase_de_lista Where clase=:id";
     $parametros = array("id"=>$_GET['id']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
+    $datos = [];
+    $aux=0;
+    foreach($alumnos as $id){
+        $datos[$aux]=$id['Matricula'];
+        $aux=$aux+1;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
