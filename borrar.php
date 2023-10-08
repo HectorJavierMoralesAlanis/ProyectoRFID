@@ -4,7 +4,8 @@
 
     $id=$_GET['id'];
     $clase=$_GET['clase'];
-    
+    echo $id;
+    echo $clase;
     
     $dao2=new DAO();
 
