@@ -3,7 +3,7 @@
     echo $_GET['matricula'];
     $dao = new DAO();
     $consulta="SELECT * FROM Clases Where matriculaMaestro=:matricula";
-    $parametros=array("matricula"=>$_POST['matricula']);
+    $parametros=array("matricula"=>$_GET['matricula']);
     $clases=$dao->ejecutarConsulta($consulta,$parametros);
     echo $clases;
     foreach ($clases as $id){
