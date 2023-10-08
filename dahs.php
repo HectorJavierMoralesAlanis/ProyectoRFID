@@ -68,7 +68,9 @@
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['<?php foreach($alumnos as $alumno){echo $alumno['Matricula']}?>'],
+      <?php foreach($alumnos as $alumno){?>
+      labels: ['<?php echo $alumno['Matricula']?>']
+      <?php }?>,
       datasets: [{
         label: '# of Votes',
         data: [12, 19, 3, 5, 2, 3],
@@ -83,6 +85,6 @@
       }
     }
   });
-  const url = ;
+  
 </script>
 </html>
