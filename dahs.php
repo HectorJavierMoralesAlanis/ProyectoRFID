@@ -25,7 +25,6 @@
           </li>
       </ul>
   </nav>
-
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Logo --->
       <a href="../dashboard.php?id=<?php echo $_GET['id']?>" class="brand-link">
