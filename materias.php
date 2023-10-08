@@ -1,14 +1,9 @@
 <?php 
     include ('DAO.php');
-    echo $_GET['matricula'];
     $dao = new DAO();
     $consulta="SELECT * FROM Clases Where matriculaMaestro=:matricula";
     $parametros=array("matricula"=>$_GET['matricula']);
     $clases=$dao->ejecutarConsulta($consulta,$parametros);
-    echo $clases;
-    foreach ($clases as $id){
-        echo $id['id'];
-    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,9 +80,6 @@
                                       <tr>
                                           <th>ID</th>
                                           <th>Materia</th>
-                                          <th>Matricula del Maestro</th>
-                                          <th>Editar</th>
-                                          <th>Eliminar</th>
                                           <th>Detalles</th>
                                       </tr>
                                   </thead>
