@@ -6,7 +6,7 @@
     $clase=$_GET['clase'];
     echo $id;
     echo $clase;
-    /*
+    
     $dao2=new DAO();
 
     $consulta2 = "SELECT * FROM Clases WHERE clase=:clase";
@@ -14,7 +14,8 @@
     $parametros2 = array('clase'=>$clase);
 
     $clases = $dao2->insertarConsulta($consulta2,$parametros2);
-
+    echo $clases;
+    /*
     $dao=new DAO();
 
     $consulta = "DELETE FROM Pase_de_lista WHERE id=:id";
