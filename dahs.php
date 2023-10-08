@@ -8,8 +8,12 @@
     $datos = [];
     $aux=0;
     foreach($alumnos as $id){
-        $datos[$aux]=$id['Matricula'];
-        $aux=$aux+1;
+        if($id['Matricula'] in_array($datos)){
+
+        }else{
+            $datos[$aux]=$id['Matricula'];
+            $aux=$aux+1;
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -91,6 +95,9 @@
     type: 'bar',
     data: {
       labels: ['Alumnos'],
+      datasets:[
+
+      ]
     },
     options: {
       scales: {
