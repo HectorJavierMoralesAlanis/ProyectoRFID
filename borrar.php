@@ -15,7 +15,7 @@
 
     $clases = $dao2->ejecutarConsulta($consulta2,$parametros2);
     foreach($clases as $clasess){
-        echo $clasess['id'];
+        $idMateria $clasess['id'];
         echo $clasess['nombre'];
     }
     
@@ -28,8 +28,6 @@
     $resultados = $dao->insertarConsulta($consulta,$parametros);
 
     if($resultados>=0){
-        foreach($clases as $idMat){
-            header("Location: http://134.122.22.100/dahs.php?id=$idMat['id']");
-        }
+        header("Location: http://134.122.22.100/dahs.php?id=$idMateria");
     }
 ?>
