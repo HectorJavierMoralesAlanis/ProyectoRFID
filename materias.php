@@ -78,6 +78,7 @@
                               <table class="table table-bordered">
                                   <thead>
                                       <tr>
+                                        
                                           <th>ID</th>
                                           <th>Materia</th>
                                           <th>Detalles</th>
