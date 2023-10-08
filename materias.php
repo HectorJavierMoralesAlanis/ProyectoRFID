@@ -1,6 +1,7 @@
 <?php 
     include ('DAO.php');
     $dao = new DAO();
+    echo "Bruja como wanda";
     $consulta="SELECT * FROM Clases Where matriculaMaestro=:matricula";
     $parametros=array("matricula"=>$_POST['matricula']);
     $clases=$dao->ejecutarConsulta($consulta,$parametros);
