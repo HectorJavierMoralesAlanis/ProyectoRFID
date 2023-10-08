@@ -76,7 +76,7 @@
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: <?php echo $arreglo;?>
+      labels: ['red'],
       datasets: [{
         label: '# of Votes',
         data: [12, 19, 3, 5, 2, 3],
