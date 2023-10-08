@@ -15,7 +15,7 @@
 
     $clases = $dao2->ejecutarConsulta($consulta2,$parametros2);
     foreach($clases as $clasess){
-        $idMateria $clasess['id'];
+        $idMateria = $clasess['id'];
         echo $clasess['nombre'];
     }
     
