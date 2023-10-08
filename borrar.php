@@ -24,7 +24,7 @@
 
     if($resutlados>=0){
         foreach($clases as $clase){
-            header("Location: http://134.122.22.100/dahs.php?matriculaMaestro=$clase['matriculaMaestro']");
+            header("Location: http://134.122.22.100/dahs.php?matriculaMaestro=$clase['id']");
         }
     }
 ?>
