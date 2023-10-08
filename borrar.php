@@ -14,7 +14,10 @@
     $parametros2 = array('clase'=>$clase);
 
     $clases = $dao2->insertarConsulta($consulta2,$parametros2);
-    echo $clases;
+    foreach($clases as $clasess){
+        echo $clasess['id'];
+        echo $clasess['nombre'];
+    }
     /*
     $dao=new DAO();
 
