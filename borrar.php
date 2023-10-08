@@ -18,7 +18,7 @@
 
     $consulta = "DELETE FROM Pase_de_lista WHERE id=:id";
 
-    $parametros=array("id"=$id);
+    $parametros=array("id"=>$id);
 
     $resultados = $dao->insertarConsulta($consulta,$parametros);
 
