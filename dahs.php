@@ -1,9 +1,9 @@
 <?php 
     include ('DAO.php');
     $dao = new DAO();
-    //$consulta = "SELECT * Alumnos Where clase=:id";
-    //$parametros = array("id"=>$_GET['id']);
-    //$alumnos = $dao->ejecutarConsulta($consulta,$parametros);
+    $consulta = "SELECT * FROM Alumnos Where clase=:id";
+    $parametros = array("id"=>$_GET['id']);
+    $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
 ?>
 <!DOCTYPE html>
 <html lang="en">
