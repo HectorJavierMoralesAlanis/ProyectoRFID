@@ -13,6 +13,7 @@
         }else{
             $datos[$aux]=$id['Matricula'];
             echo $datos[$aux];
+            echo '\n';
             $aux=$aux+1;
 
         }
