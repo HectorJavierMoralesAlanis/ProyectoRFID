@@ -9,7 +9,6 @@
     $aux=0;
     foreach($alumnos as $id){
         $datos[$aux]=$id['Matricula'];
-        echo $datos[$aux];
         $aux=$aux+1;
     }
 ?>
@@ -75,7 +74,7 @@
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                        
+
                         <!--<div class="container">
                             <canvas id="myChart" width="400" height="400"></canvas>
                         </div>-->
