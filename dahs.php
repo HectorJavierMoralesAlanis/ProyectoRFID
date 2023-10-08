@@ -52,12 +52,13 @@
                                   <?php }?>
                               </table>
                           </div>
+                          <canvas id="myChart" width="400" height="400"></canvas>
                       </div>
                   </div>
               </div>
           </div>
       </section>
 </div>
-</body>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</body>
 </html>
