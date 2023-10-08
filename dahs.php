@@ -107,7 +107,7 @@
     .cath( error => console.log(error))
    const mostrar = (articulo) => {
     articulos.forEach(element =>{
-        myChart.data['labels'].push(elemnt.descripcion)
+        myChart.data['labels'].push(element.descripcion)
         myChart.data['datasets'][0].data.push(element.stock)
     });
    }
