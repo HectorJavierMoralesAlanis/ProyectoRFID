@@ -9,7 +9,7 @@
     
     $dao2=new DAO();
 
-    $consulta2 = "SELECT * FROM Clases WHERE clase=:clase";
+    $consulta2 = "SELECT * FROM Clases WHERE id=:clase";
 
     $parametros2 = array('clase'=>$clase);
 
