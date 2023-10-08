@@ -16,6 +16,7 @@
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 
   <!-- Contenido -->
+  
       <section class="content">
           <div class="container-fluid">
               <div class="row">
