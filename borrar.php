@@ -12,7 +12,7 @@
 
     $parametros2 = array('clase'=>$clase);
 
-    $clases = $dao2->ejecutarConsulta($consulta2,$parametros2);
+    $clases = $dao2->insertarConsulta($consulta2,$parametros2);
 
     $dao=new DAO();
 
