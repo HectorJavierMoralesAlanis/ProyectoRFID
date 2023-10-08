@@ -6,7 +6,7 @@
     $clase=$_GET['clase'];
     echo $id;
     echo $clase;
-    
+    /*
     $dao2=new DAO();
 
     $consulta2 = "SELECT * FROM Clases WHERE clase=:clase";
@@ -27,5 +27,5 @@
         foreach($clases as $id){
             header("Location: http://134.122.22.100/dahs.php?id=$id['id']");
         }
-    }
+    }*/
 ?>
