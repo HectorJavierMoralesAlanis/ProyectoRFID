@@ -69,7 +69,7 @@
     type: 'bar',
     data: {
       <?php foreach($alumnos as $alumno){?>
-        labels: [<?php echo '$alumnos['Matricula']'?>]
+        labels: [<?php echo '$alumno['Matricula']'?>]
       <?php }?>,
       datasets: [{
         label: '# of Votes',
