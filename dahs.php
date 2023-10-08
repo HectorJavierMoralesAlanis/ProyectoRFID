@@ -47,7 +47,7 @@
                                       <td><?php echo $alumno['Asistio']; ?></td>
                                       <td><?php echo $alumno['Fecha']; ?></td>
                                       <td><?php echo $alumno['hora'];?></td>
-                                      <td class="align-middle"><a href="./dahs.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
+                                      <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
                                   </tr>
                                   <?php }?>
                               </table>
