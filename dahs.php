@@ -77,8 +77,8 @@
                           <h1>Gráfico de Ventas por Mes</h1>
                         <div class="grafico">
                             <?php foreach ($datos as $dato): ?>
-                                <div class="barra" style="width: <?= $dato[1] ?>px;">
-                                    <?= $dato[0] ?>
+                                <div class="barra" style="width: <?= $dato ?>px;">
+                                    <?= $dato ?>
                                 </div>
                             <?php endforeach; ?>
                         </div>
