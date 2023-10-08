@@ -1,7 +1,7 @@
 <?php 
     include ('DAO.php');
     $dao = new DAO();
-    $consulta = "SELECT * FROM Alumnos Where clase=:id";
+    $consulta = "SELECT * FROM Pase_de_lista Where clase=:id";
     $parametros = array("id"=>$_GET['id']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
 ?>
@@ -81,9 +81,6 @@
                                           <th>Matricula</th>
                                           <th>Asistio</th>
                                           <th>Fecha de la asistencia</th>
-                                          <th>Editar</th>
-                                          <th>Eliminar</th>
-                                          <th>Detalles</th>
                                       </tr>
                                   </thead>
                                   <tbody>
