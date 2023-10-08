@@ -27,7 +27,6 @@
 
     $resultados = $dao->insertarConsulta($consulta,$parametros);
 
-    if($resultados>=0){
-        header("Location: http://134.122.22.100/dahs.php?id=$idMateria");
-    }
+    header("Location: http://134.122.22.100/dahs.php?id=$idMateria");
+    
 ?>
