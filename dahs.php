@@ -12,7 +12,9 @@
 
         }else{
             $datos[$aux]=$id['Matricula'];
+            echo $datos[$aux];
             $aux=$aux+1;
+
         }
     }
 ?>
