@@ -1,4 +1,9 @@
 <?php 
+    include ('DAO.php');
+    $dao = new DAO();
+    $consulta = "SELECT * Alumnos Where clase=:id";
+    $parametros = array("id"=>$_GET['id']);
+    $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,14 +88,11 @@
                                   </thead>
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
-                                  <?php foreach ($productos as $invetario) { ?>
+                                  <?php foreach ($alumnos as $alumno) { ?>
                                   <tr>
-                                      <td><?php echo $invetario['Matricula']; ?></td>
-                                      <td><?php echo $invetario['Asistio']; ?></td>
-                                      <td><?php echo $invetario['Fecha']; ?></td>
-                                      <td class="align-middle"><a href="./editarInverntario.php?id=<?php echo $invetario['id']?>" method="POST" class="btn btn-warning btn-block btn-sm" >EDITAR</a></td>
-                                      <td class="align-middle"><a href="./eliminarInventario.php?id=<?php echo($invetario['id']); ?>" class="btn btn-danger btn-block btn-sm" onClick="wait();">ELIMINAR</a></td>
-                                      <td class="align-middle"><a href="./venta.php?id=<?php echo $invetario['id']?>" method="POST" class="btn btn-info btn-block btn-sm">Detalles</a></td>
+                                      <td><?php echo $alumno['Matricula']; ?></td>
+                                      <td><?php echo $alumnos['Asistio']; ?></td>
+                                      <td><?php echo $alumno['Fecha']; ?></td>
                                   </tr>
                                   <?php }?>
                               </table>
