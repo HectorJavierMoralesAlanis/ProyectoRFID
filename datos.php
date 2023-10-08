@@ -1,5 +1,5 @@
 <?php
-    include('dahs.php');
+    #include('dahs.php');
     #echo $alumnos;
 
 ?>
