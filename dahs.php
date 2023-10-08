@@ -5,14 +5,6 @@
     $consulta = "SELECT * FROM Pase_de_lista Where clase=:id";
     $parametros = array("id"=>$_GET['id']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
-    $arreglo = array();
-    $aux=0
-    foreach($alumnos as $id){
-        $arreglo[$aux]=$id['Matricula'];
-        echo $arreglo[$aux];
-        $aux=$aux+1;
-    }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -76,7 +68,7 @@
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['red'],
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
       datasets: [{
         label: '# of Votes',
         data: [12, 19, 3, 5, 2, 3],
