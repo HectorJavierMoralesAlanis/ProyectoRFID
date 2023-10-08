@@ -70,7 +70,6 @@
                               <!--Div para que el boton este a la derecha-->
                               <div class="btn-group" style="float: right;">
                                   <a href="./agregarInverntario.php?id=<?php echo $id?>" class="btn btn-block btn-success" style="float: right;">Agregar nuevo alumno</a>
-                                  
                               </div>
                           </div>
                           <!-- Cuerpo del formulario-->
