@@ -75,17 +75,9 @@
                               </table>
                           </div>
                           <h1>Gráfico de Ventas por Mes</h1>
-                        <div class="grafico">
-                            <?php foreach ($datos as $dato): ?>
-                                <div class="hrafico" style="width: 15px;">
-                                    <?php $dato ?>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-
-                        <!--<div class="container">
+                        <div class="container">
                             <canvas id="myChart" width="400" height="400"></canvas>
-                        </div>-->
+                        </div>
                       </div>
                   </div>
               </div>
@@ -112,7 +104,17 @@
         }
       }
     }
-  });
-  
+  }); 
+  const url = "./datos.php?id=<?php echo $_GET['id']?>"; 
+  fecth(url)
+    .then(response => response.json())
+    .then(datos => mostrar(datos))
+    .cath( error => console.log(error))
+   const mostrar = (articulo) => {
+    articulos.forEach(element =>{
+        myChart.data['labels'].push(elemnt.descripcion)
+        myChart.data['datasets'][0].data.push(element.stock)
+    });
+   }
 </script>
 </html>
