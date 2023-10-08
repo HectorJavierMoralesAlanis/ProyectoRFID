@@ -89,13 +89,11 @@
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
                                   <?php foreach ($alumnos as $alumno) { ?>
-                                    
                                   <tr>
                                       <td><?php echo $alumno['Matricula']; ?></td>
                                       <td><?php echo $alumnos['Asistio']; ?></td>
                                       <td><?php echo $alumno['Fecha']; ?></td>
                                   </tr>
-                                  
                                   <?php }?>
                               </table>
                           </div>
