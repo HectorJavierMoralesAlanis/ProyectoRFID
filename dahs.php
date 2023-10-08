@@ -44,7 +44,7 @@
                                   <?php foreach ($alumnos as $alumno) { ?>
                                   <tr>
                                       <td><?php echo $alumno['Matricula']; ?></td>
-                                      <td><?php echo $alumnos['Asistio']; ?></td>
+                                      <td><?php echo $alumno['Asistio']; ?></td>
                                       <td><?php echo $alumno['Fecha']; ?></td>
                                   </tr>
                                   <?php }?>
