@@ -4,6 +4,8 @@
 
     $id=$_GET['id'];
     $clase=$_GET['clase'];
+    echo $id;
+    echo $clase;
     
     $dao2=new DAO();
 
@@ -12,6 +14,10 @@
     $parametros2 = array('clase'=>$clase);
 
     $clases = $dao2->ejecutarConsulta($consulta2,$parametros2);
+    foreach($clases as $clasess){
+        echo $clasess['id'];
+        echo $clasess['nombre'];
+    }
     
     $dao=new DAO();
 
@@ -20,10 +26,11 @@
     $parametros=array("id"=>$id);
 
     $resultados = $dao->insertarConsulta($consulta,$parametros);
-
+/*
     if($resultados>=0){
-        foreach($clases as $id2){
-            header("Location: http://134.122.22.100/dahs.php?id=$id2['id']");
+        foreach($clases as $id){
+            header("Location: http://134.122.22.100/dahs.php?id=$id['id']");
         }
     }
+*/
 ?>
