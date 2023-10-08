@@ -8,7 +8,7 @@
     $datos = [];
     $aux=0;
     foreach($alumnos as $id){
-        if($id['Matricula'] in_array($datos)){
+        if(in_array($id["Matricula"],$datos)){
 
         }else{
             $datos[$aux]=$id['Matricula'];
