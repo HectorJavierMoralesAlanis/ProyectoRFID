@@ -23,8 +23,8 @@
     $resultados = $dao->insertarConsulta($consulta,$parametros);
 
     if($resutlados>=0){
-        foreach($clases as $clase){
-            header("Location: http://134.122.22.100/dahs.php?matriculaMaestro=$clase['id']");
+        foreach($clases as $id){
+            header("Location: http://134.122.22.100/dahs.php?id=$id['id']");
         }
     }
 ?>
