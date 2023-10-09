@@ -31,7 +31,7 @@
             $claseArreglo=$dao3->insertarConsulta($consulta3,$parametros3);
             $consulta4="SELECT grupo FROM Alumnos WHERE Matricula=:matricula";
             $parametros4=array("matricula"=>$matricula);
-            $grupoArreglo=$dao3->insertarConsulta($consulta3,$parametros3);
+            $grupoArreglo=$dao4->insertarConsulta($consulta4,$parametros4);
             $fecha=date('Y-m-d H:i:s');
             //echo $fecha;
             foreach($claseArreglo as $id){
@@ -49,16 +49,29 @@
             //Se cambio la forma de verificar
         }else if($alumno['Contra']===$rfid){
             $dao2 = new DAO();
+            $dao3 = new DAO();
+            $dao4 = new DAO();
             echo "Ingresado";
-            
             $matricula=$alumno['Matricula'];
             //echo $matricula;
+            $consulta3="SELECT clase FROM Alumnos WHERE Matricula=:matricula";
+            $parametros3=array("matricula"=>$matricula);
+            $claseArreglo=$dao3->insertarConsulta($consulta3,$parametros3);
+            $consulta4="SELECT grupo FROM Alumnos WHERE Matricula=:matricula";
+            $parametros4=array("matricula"=>$matricula);
+            $grupoArreglo=$dao4->insertarConsulta($consulta4,$parametros4);
             $fecha=date('Y-m-d H:i:s');
             //echo $fecha;
+            foreach($claseArreglo as $id){
+                $clase = $id['clase'];
+            }
+            foreach($grupoArreglo as $id){
+                $grupo= $id['grupo'];
+            }
+            
             $asistio=1;
-            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha)"."VALUES (:matricula,:asistio,:fecha)";
-            $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha);
-
+            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha,grupo,clase)"."VALUES (:matricula,:asistio,:fecha,:grupo,:clase)";
+            $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha,"grupo"=>$grupo,"clase"=>$clase);
             $pase = $dao2->insertarConsulta($consulta2,$parametros);
             break;
         }else{
