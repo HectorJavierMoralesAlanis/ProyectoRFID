@@ -87,7 +87,7 @@
                               <h3 class="card-title">Alumnos</h3>
                               <!--Div para que el boton este a la derecha-->
                               <div class="btn-group" style="float: right;">
-                                  <a href="./materias.php?id=<?php echo $_GET['matricula']?>" class="btn btn-block btn-success" style="float: right;">Regresar</a>
+                                  <a href="./materias.php?matricula=<?php echo $_GET['matricula']?>" class="btn btn-block btn-success" style="float: right;">Regresar</a>
                               </div>
                           </div>
                           <!-- Cuerpo del formulario-->
