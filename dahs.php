@@ -148,6 +148,10 @@
     const nMatriculas = <?php echo json_encode($matriculas);?>;
     const asistenciaPorcentaje = <?php echo json_encode($porcentajes);?>;
     console.log(alumnos);
+    function getRandomColor() {
+        const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
     var ctx = document.getElementById("myChart").getContext("2d");
     
     const asistenciaAlumnos = {
@@ -160,7 +164,7 @@
     const asistenciaPor = {
         label: "Porcentaje",
         data: asistenciaPorcentaje.map(asisP => asisP),
-        backgroundColor: 'rgba(237,78,136, 0.2)', // Color de fondo
+        backgroundColor: [getRandomColor()],
         borderColor: 'rgba(237,78,136, 1)', // Color del borde
         borderWidth: 1, // Ancho del borde
     };
@@ -182,10 +186,7 @@
         }
         }
     });
-    function getRandomColor() {
-        const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
-        return colors[Math.floor(Math.random() * colors.length)];
-    }
+
 
     // Creamos un nuevo gráfico
     var ctx2 = document.getElementById("myChart2").getContext("2d");
@@ -196,7 +197,6 @@
             datasets: [
             {
                 asistenciaPor,
-                backgroundColor: [getRandomColor()],
 
             },
             ],
