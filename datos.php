@@ -13,7 +13,7 @@
     $fecha=date('Y-m-d H:i:s');
     //echo $fecha;
     foreach($claseArreglo as $id){
-        $clase = $id['clase'];
+        $clase = $id;
     }
     foreach($grupoArreglo as $id){
         $grupo= $id['grupo'];
