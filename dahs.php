@@ -157,13 +157,11 @@
             ]
         },
         options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }],
-            },
+        scales: {
+            y: {
+            beginAtZero: true
+            }
+        }
         }
     });
 /*
