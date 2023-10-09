@@ -42,14 +42,6 @@
         echo "\n";
         echo count($asistencias);
     }
-/*
-    function asistencia_Matricula2($matricula, $dao) {
-        $consulta = "SELECT COUNT(*) AS asistencias FROM Pase_de_lista WHERE Matricula = :matricula AND Asistio = 1";
-        $parametros = array("matricula" => $matricula);
-        $asistencias = $dao->ejecutarConsulta($consulta, $parametros);
-    
-        return $asistencias[0]['asistencias'];
-    }*/
     
     $matriculas = [];
     foreach ($alumnos as $alumno) {
@@ -57,9 +49,22 @@
             $matriculas[] = $alumno['Matricula'];
         }
     }
+    function porcentaje_Asistencia($matricula, $dao) {
+        $asistencias = asistencia_Matricula($matricula, $dao);
+        $total_clases = 5;
+        $porcentaje = $asistencias / $total_clases * 100;
     
-    echo json_encode($matriculas);
+        return $porcentaje;
+    }
     
+    $matriculas = [];
+    $porcentajes = [];
+    foreach ($alumnos as $alumno) {
+        if (!in_array($alumno['Matricula'], $matriculas)) {
+            $matriculas[] = $alumno['Matricula'];
+            $porcentajes[] = porcentaje_Asistencia($alumno['Matricula'], $dao);
+        }
+    }    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -127,6 +132,9 @@
                         <div class="container">
                             <canvas id="myChart" width="400" height="400"></canvas>
                         </div>
+                        <div class="container">
+                            <canvas id="myChart2" width="400" height="400"></canvas>
+                        </div>
                       </div>
                   </div>
               </div>
@@ -137,6 +145,7 @@
 <script>
     const alumnos = <?php echo json_encode($asistencias);?>;
     const nMatriculas = <?php echo json_encode($matriculas);?>;
+    const asistenciaPorcentaje = <?php echo json_encode($porcentajes);?>;
     console.log(alumnos);
     var ctx = document.getElementById("myChart").getContext("2d");
     const asistenciaAlumnos = {
@@ -146,27 +155,15 @@
         borderColor: 'rgba(237,78,136, 1)', // Color del borde
         borderWidth: 1, // Ancho del borde
     };
+    const asistenciaPor = {
+        label: "Porcentaje",
+        data: asistenciaPorcentaje.map(asisP => asisP),
+        backgroundColor: 'rgba(237,78,136, 0.2)', // Color de fondo
+        borderColor: 'rgba(237,78,136, 1)', // Color del borde
+        borderWidth: 1, // Ancho del borde
+    };
 
-    var myChart = new Chart(ctx, {/*
-        type: 'bar',
-        data: {
-        labels: [], // Inicializa las etiquetas vacías
-        datasets: [{
-            label: 'Alumnos',
-            data: [], // Inicializa los datos vacíos
-            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de fondo
-            borderColor: 'rgba(75, 192, 192, 1)', // Color del borde
-            borderWidth: 1 // Ancho del borde
-        }]
-        }
-        options: {
-        scales: {
-            y: {
-            beginAtZero: true
-            }
-        }
-        }
-        */
+    var myChart = new Chart(ctx, {
         type: 'line', // Tipo de gráfica
         data: {
             labels: nMatriculas.map(nmat => nmat),
@@ -183,25 +180,19 @@
         }
         }
     });
-/*
-    new Chart($grafica, {
-        type: 'line', // Tipo de gráfica
-        data: {
-            labels: etiquetas,
-            datasets: [
-                asistenciaAlumnos,
-                // Aquí más datos...
-            ]
+    // Creamos un nuevo gráfico
+    const ctx2 = document.getElementById("myChart2").getContext("2d");
+    const myChart2 = new Chart2(ctx, {
+    type: "pie",
+    data: {
+        labels: nMatriculas.map(nmat => nmat),
+        datasets: [
+        {
+            asitenciaPor,
+            backgroundColor: ["#ff0000", "#00ff00", "#0000ff"],
         },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }],
-            },
-        }
-    });*/
+        ],
+    },
+    });
 </script>
 </html>
