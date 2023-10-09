@@ -28,15 +28,16 @@
             $consulta3 = "SELECT clase FROM Alumnos WHERE Matricula =: matricula";
             $sentencia3 = array("matricula"=>$matricula);
             $clase = $dao3->ejecutarConsulta($consulta3,$parametros3);
+            echo $claseñ
             $consulta4 = "SELECT grupo FROM Alumnos WHERE Matricula =: matricula";
             $sentencia4 = array("matricula"=>$matricula);
             $grupo = $dao4->ejecutarConsulta($consulta4,$parametros4); 
-            //echo $matricula;                  
+            echo $grupo;                  
             $fecha=date('Y-m-d H:i:s');
             //echo $fecha;
             $asistio=1;
-            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha,grupo,clase)"."VALUES (:matricula,:asistio,:fecha,:grupo,:clase)";
-            $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha,"grupo"=>$grupo,"clase"=>$clase);
+            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha)"."VALUES (:matricula,:asistio,:fecha)";
+            $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha);
             $pase = $dao2->insertarConsulta($consulta2,$parametros);
             break;
             //Se cambio la forma de verificar
