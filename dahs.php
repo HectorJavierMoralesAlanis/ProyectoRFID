@@ -30,10 +30,7 @@
     }
 
     //Funcion para contar asistencia
-    function asistencia_Matricula(){
-        $asist=new DAO();
-        $sentencia=""
-    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
