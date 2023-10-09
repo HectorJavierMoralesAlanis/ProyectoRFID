@@ -157,6 +157,9 @@
                 }
             }
         });
+
+        console.log(datos.matriculas);
+        console.log(datos.asistencias);
     }
 </script>
 </html>
