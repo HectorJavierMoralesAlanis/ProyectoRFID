@@ -27,7 +27,7 @@
                               <h3 class="card-title">Materias</h3>
                               <!--Div para que el boton este a la derecha-->
                               <div class="btn-group" style="float: right;">
-                                  <a href="./agregarInverntario.php?id=<?php echo $id?>" class="btn btn-block btn-success" style="float: right;">Agregar nueva materia</a>
+                                  <a href="./login.php" class="btn btn-block btn-success" style="float: right;">Cerrar sesion</a>
                                   
                               </div>
                           </div>
