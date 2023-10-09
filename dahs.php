@@ -8,19 +8,6 @@
     $datos = [];
     $asistencia=[];
     $aux=0;
-    //Obtner arreglo sin repeticiones
-    /*foreach($alumnos as $id){
-        if(in_array($id["Matricula"],$datos)){
-
-        }else{
-            $datos[$aux]=$id['Matricula'];
-            //echo $datos[$aux];
-     //       $asistencia = 1;
-            //echo '\n';
-            $aux=$aux+1;
-
-        }
-    }*/
 
     //Funcion para contar asistencia
     function asistencia_Matricula($matricula, $dao) {
@@ -98,6 +85,10 @@
                           <!-- Header del contenido-->
                           <div class="card-header">
                               <h3 class="card-title">Alumnos</h3>
+                              <!--Div para que el boton este a la derecha-->
+                              <div class="btn-group" style="float: right;">
+                                  <a href="./materias.php?id=<?php echo $id?>" class="btn btn-block btn-success" style="float: right;">Regresar</a>
+                              </div>
                           </div>
                           <!-- Cuerpo del formulario-->
                           <div class="card-body">

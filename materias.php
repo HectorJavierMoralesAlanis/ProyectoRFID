@@ -48,7 +48,7 @@
                                   <tr>
                                       <td><?php echo $clase['id']; ?></td>
                                       <td><?php echo $clase['nombre']; ?></td>
-                                      <td class="align-middle"><a href="./dahs.php?id=<?php echo $clase['id']?>" method="POST" class="btn btn-info btn-block btn-sm">Ingresar</a></td>
+                                      <td class="align-middle"><a href="./dahs.php?id=<?php echo $clase['id']?>&matricula=<?php echo $clase['matriculaMaestro']?>" method="POST" class="btn btn-info btn-block btn-sm">Ingresar</a></td>
                                   </tr>
                                   <?php }?>
                               </table>
