@@ -27,7 +27,7 @@
             $matricula=$alumno['Matricula'];
             $consulta3 = "SELECT clase FROM Alumnos WHERE Matricula =: matricula";
             $sentencia3 = array("matricula"=>$matricula);
-            $clase = $dao4->ejecutarConsulta($consulta3,$parametros3);
+            $clase = $dao3->ejecutarConsulta($consulta3,$parametros3);
             $consulta4 = "SELECT grupo FROM Alumnos WHERE Matricula =: matricula";
             $sentencia4 = array("matricula"=>$matricula);
             $grupo = $dao4->ejecutarConsulta($consulta4,$parametros4); 
