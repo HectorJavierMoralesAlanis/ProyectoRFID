@@ -189,7 +189,7 @@
 
 
     // Creamos un nuevo gráfico
-    var myChart = new Chart2(ctx, {
+    var myChart = new Chart(ctx2, {
         type: "pie", // Tipo de gráfica circular
         data: {
             labels: nMatriculas.map(nmat => nmat),
