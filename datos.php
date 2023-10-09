@@ -7,6 +7,7 @@
     $consulta3="SELECT clase FROM Alumnos WHERE Matricula=:matricula";
     $parametros3=array("matricula"=>$matricula);
     $claseArreglo=$dao3->insertarConsulta($consulta3,$parametros3);
+    echo $claseArreglo;
     $consulta4="SELECT grupo FROM Alumnos WHERE Matricula=:matricula";
     $parametros4=array("matricula"=>$matricula);
     $grupoArreglo=$dao4->insertarConsulta($consulta4,$parametros4);
