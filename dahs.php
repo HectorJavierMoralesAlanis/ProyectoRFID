@@ -42,6 +42,24 @@
         echo "\n";
         echo count($asistencias);
     }
+/*
+    function asistencia_Matricula2($matricula, $dao) {
+        $consulta = "SELECT COUNT(*) AS asistencias FROM Pase_de_lista WHERE Matricula = :matricula AND Asistio = 1";
+        $parametros = array("matricula" => $matricula);
+        $asistencias = $dao->ejecutarConsulta($consulta, $parametros);
+    
+        return $asistencias[0]['asistencias'];
+    }*/
+    
+    $matriculas = [];
+    foreach ($alumnos as $alumno) {
+        if (!in_array($alumno['Matricula'], $matriculas)) {
+            $matriculas[] = $alumno['Matricula'];
+        }
+    }
+    
+    echo json_encode($matriculas);
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
