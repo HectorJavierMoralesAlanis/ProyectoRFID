@@ -166,7 +166,7 @@
         label: "Porcentaje",
         data: asistenciaPorcentaje.map(asisP => asisP),
         backgroundColor: asistenciaPorcentaje.map(asisP => getRandomColor()), // Color de fondo aleatorio para cada sector
-        borderColor: "rgba(237,78,136, 1)", // Color del borde
+        borderColor: "rgba(0,0,0, 1)", // Color del borde
         borderWidth: 1, // Ancho del borde
     };
     var myChart = new Chart(ctx, {
