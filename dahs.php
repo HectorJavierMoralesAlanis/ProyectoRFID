@@ -20,14 +20,14 @@
         }
     }
 
-    foreach($datos as $matricula){
+    /*foreach($datos as $matricula){
         foreach($alumnos as $al){
             while(in_array($matricula,$al)){
                 $asistencia[$matricula]=$asistencia+1;
             }
         }
         echo $asistencia[$matricula];
-    }
+    }*/
 
     //Funcion para contar asistencia
 
@@ -124,7 +124,7 @@
     }
   }); 
   const url = "./datos.php?id=<?php echo $_GET['id']?>"; 
-  fecth(url)
+  fetch(url)
     .then(response => response.json())
     .then(datos => mostrar(datos))
     .cath( error => console.log(error))
