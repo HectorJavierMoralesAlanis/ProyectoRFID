@@ -6,6 +6,7 @@
     $parametros = array("id"=>$_GET['id']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
     $datos = [];
+    $asistencia=[];
     $aux=0;
     //Obtner arreglo sin repeticiones
     foreach($alumnos as $id){
@@ -21,7 +22,7 @@
     }
 
     /*foreach($datos as $matricula){
-        foreach($alumnos as $al){
+        /*foreach($alumnos as $al){
             while(in_array($matricula,$al)){
                 $asistencia[$matricula]=$asistencia+1;
             }
