@@ -29,7 +29,7 @@
         }
         echo $asistencia[$matricula];*/
         echo $matricula;
-        echo '\n ':
+        echo '\n':
     }
 
     //Funcion para contar asistencia
