@@ -149,6 +149,7 @@
     const asistenciaPorcentaje = <?php echo json_encode($porcentajes);?>;
     console.log(alumnos);
     var ctx = document.getElementById("myChart").getContext("2d");
+    
     const asistenciaAlumnos = {
         label: "Asistencia",
         data: alumnos.map(alumno => alumno),
@@ -189,8 +190,7 @@
             labels: nMatriculas.map(nmat => nmat),
             datasets: [
             {
-                asistenciaPor,
-                backgroundColor: ["#ff0000", "#00ff00", "#0000ff"],
+                asistenciaPor
             },
             ],
         },
