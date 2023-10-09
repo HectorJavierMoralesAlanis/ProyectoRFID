@@ -150,7 +150,7 @@
         */
         type: 'line', // Tipo de gráfica
         data: {
-            labels: etiquetas,
+            labels: 'Alumnos',
             datasets: [
                 asistenciaAlumnos,
                 // Aquí más datos...
