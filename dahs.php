@@ -39,7 +39,7 @@
             $asistencias[$alumno['Matricula']] = asistencia_Matricula($alumno['Matricula'], $dao);
         }
         echo "\n";
-        echo $asistencias[$alumno['Matricula']];
+        //echo $asistencias[$alumno['Matricula']];
         echo count($asistencias);
     }
 ?>
