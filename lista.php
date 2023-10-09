@@ -27,11 +27,11 @@
             $matricula=$alumno['Matricula'];
             $consulta3 = "SELECT clase FROM Alumnos WHERE Matricula =: matricula";
             $sentencia3 = array("matricula"=>$matricula);
-            $clase = $dao3->ejecutarConsulta($consulta3,$parametros3);
+            $clase = $dao3->insertarConsulta($consulta3,$parametros3);
             echo $claseñ
             $consulta4 = "SELECT grupo FROM Alumnos WHERE Matricula =: matricula";
             $sentencia4 = array("matricula"=>$matricula);
-            $grupo = $dao4->ejecutarConsulta($consulta4,$parametros4); 
+            $grupo = $dao4->insertarConsulta($consulta4,$parametros4); 
             echo $grupo;                  
             $fecha=date('Y-m-d H:i:s');
             //echo $fecha;
