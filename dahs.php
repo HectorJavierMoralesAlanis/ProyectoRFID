@@ -25,10 +25,9 @@
         while(in_array($matricula,$alumnos)){
             $asistencia[$matricula]=$asistencia+1;
         }
-
-        //echo $asistencia[$matricula];*/
-      //  echo $matricula;
-    //    echo 'jhkbed';
+        echo '.\n'
+        echo $matricula;
+        echo $asistencia[$matricula];
     }
 
     //Funcion para contar asistencia
