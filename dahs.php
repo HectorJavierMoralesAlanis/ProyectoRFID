@@ -182,23 +182,23 @@
         }
     });
     // Creamos un nuevo gráfico
-    const ctx2 = document.getElementById("myChart2").getContext("2d");
-    const myChart2 = new Chart2(ctx2, {
-    type: "pie",
-    data: {
-        labels: nMatriculas.map(nmat => nmat),
-        datasets: [
-        {
-            asistenciaPor,
+    var ctx2 = document.getElementById("myChart2").getContext("2d");
+    var myChart2 = new Chart(ctx2, {
+        type: "pie",
+        data: {
+            labels: nMatriculas.map(nmat => nmat),
+            datasets: [
+            {
+                asistenciaPor,
+            },
+            ],
         },
-        ],
-    },
-    options: {
-        scales: {
-            y: {
-            beginAtZero: true
+        options: {
+            scales: {
+                y: {
+                beginAtZero: true
+                }
             }
-        }
         }
     });
 </script>
