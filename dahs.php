@@ -125,7 +125,7 @@
         borderColor: 'rgba(237,78,136, 1)', // Color del borde
         borderWidth: 1, // Ancho del borde
     }
-    var myChart = new Chart(ctx, {
+    var myChart = new Chart(ctx, {/*
         type: 'bar',
         data: {
         labels: [], // Inicializa las etiquetas vacías
@@ -136,7 +136,7 @@
             borderColor: 'rgba(75, 192, 192, 1)', // Color del borde
             borderWidth: 1 // Ancho del borde
         }]
-        },
+        }
         options: {
         scales: {
             y: {
@@ -144,9 +144,7 @@
             }
         }
         }
-    });
-
-    new Chart($grafica, {
+        */
         type: 'line', // Tipo de gráfica
         data: {
             labels: etiquetas,
@@ -165,5 +163,25 @@
             },
         }
     });
+/*
+    new Chart($grafica, {
+        type: 'line', // Tipo de gráfica
+        data: {
+            labels: etiquetas,
+            datasets: [
+                asistenciaAlumnos,
+                // Aquí más datos...
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }],
+            },
+        }
+    });*/
 </script>
 </html>
