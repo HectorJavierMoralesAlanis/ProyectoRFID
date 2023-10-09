@@ -21,4 +21,5 @@
         $grupo= $id['grupo'];
     }
     echo $clase;
+    
 ?>
