@@ -25,7 +25,7 @@
         while(in_array($matricula,$alumnos)){
             $asistencia[$matricula]=$asistencia+1;
         }
-        echo '.\n'
+        echo '.\n';
         echo $matricula;
         echo $asistencia[$matricula];
     }
