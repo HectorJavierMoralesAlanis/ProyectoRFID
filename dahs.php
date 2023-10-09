@@ -22,14 +22,13 @@
     }
 
     foreach($datos as $matricula){
-        foreach($alumnos as $al){
-            while(in_array($matricula,$al)){
-                $asistencia[$matricula]=$asistencia+1;
-            }
+        while(in_array($matricula,$al)){
+            $asistencia[$matricula]=$asistencia+1;
         }
+
         //echo $asistencia[$matricula];*/
-        echo $matricula;
-        echo 'jhkbed';
+      //  echo $matricula;
+    //    echo 'jhkbed';
     }
 
     //Funcion para contar asistencia
