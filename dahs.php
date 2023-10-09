@@ -29,7 +29,7 @@
         }
         echo $asistencia[$matricula];*/
         echo $matricula;
-        echo 'jhkbed':
+        echo 'jhkbed';
     }
 
     //Funcion para contar asistencia
