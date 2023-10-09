@@ -136,6 +136,7 @@
 </body>
 <script>
     const alumnos = <?php echo json_encode($asistencias);?>;
+    const nMatriculas = <?php echo json_encode($matriculas);?>;
     console.log(alumnos);
     var ctx = document.getElementById("myChart").getContext("2d");
     const asistenciaAlumnos = {
@@ -168,7 +169,7 @@
         */
         type: 'line', // Tipo de gráfica
         data: {
-            labels: 'Alumnos',
+            labels: nMatriculas.map(nmat => nmat),
             datasets: [
                 asistenciaAlumnos,
                 // Aquí más datos...
