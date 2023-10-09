@@ -153,7 +153,8 @@
         return colors[Math.floor(Math.random() * colors.length)];
     }
     var ctx = document.getElementById("myChart").getContext("2d");
-    
+    var ctx2 = document.getElementById("myChart2").getContext("2d");
+
     const asistenciaAlumnos = {
         label: "Asistencia",
         data: alumnos.map(alumno => alumno),
@@ -188,7 +189,7 @@
 
 
     // Creamos un nuevo gráfico
-    var myChart = new Chart(ctx, {
+    var myChart = new Chart2(ctx, {
         type: "pie", // Tipo de gráfica circular
         data: {
             labels: nMatriculas.map(nmat => nmat),
