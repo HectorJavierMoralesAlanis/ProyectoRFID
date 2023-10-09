@@ -40,6 +40,7 @@
         }
         echo "\n";
         echo $asistencias[$alumno['Matricula']];
+        echo count($asistencias);
     }
 ?>
 <!DOCTYPE html>
