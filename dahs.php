@@ -9,35 +9,32 @@
     $asistencia=[];
     $aux=0;
     //Obtner arreglo sin repeticiones
-    foreach($alumnos as $id){
+    /*foreach($alumnos as $id){
         if(in_array($id["Matricula"],$datos)){
 
         }else{
             $datos[$aux]=$id['Matricula'];
             //echo $datos[$aux];
+     //       $asistencia = 1;
             //echo '\n';
             $aux=$aux+1;
 
         }
-    }
-
-    foreach($datos as $matricula){
-        while(in_array($matricula,$alumnos)){
-            if($isset($asistencia[$matricula])){
-            $asistencia[$matricula]=$asistencia[$matricula]+1;
-            }else{
-                $aistencia[$matricula]=1;
-            }
-        }
-        echo '\n';
-        echo $matricula;
-        echo '\n';
-        echo $asistencia[$matricula];
-        echo '\n';
-    }
+    }*/
 
     //Funcion para contar asistencia
+    function asistencia_Matricula($matricula, $dao) {
+        $consulta = "SELECT COUNT(*) AS asistencias FROM Pase_de_lista WHERE Matricula = :matricula AND Asistio = 1";
+        $parametros = array("matricula" => $matricula);
+        $asistencias = $dao->ejecutarConsulta($consulta, $parametros);
+    
+        return $asistencias[0]['asistencias'];
+    }
 
+    $asistencias = [];
+    foreach ($alumnos as $alumno) {
+        $asistencias[$alumno['Matricula']] = asistencia_Matricula($alumno['Matricula'], $dao);
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,41 +110,53 @@
 </div>
 </body>
 <script>
-  var ctx = document.getElementById("myChart").getContext("2d");
-  var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [], // Inicializa las etiquetas vacías
-      datasets: [{
-        label: 'Alumnos',
-        data: [], // Inicializa los datos vacíos
-        backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de fondo
-        borderColor: 'rgba(75, 192, 192, 1)', // Color del borde
-        borderWidth: 1 // Ancho del borde
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+        labels: [], // Inicializa las etiquetas vacías
+        datasets: [{
+            label: 'Alumnos',
+            data: [], // Inicializa los datos vacíos
+            backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de fondo
+            borderColor: 'rgba(75, 192, 192, 1)', // Color del borde
+            borderWidth: 1 // Ancho del borde
+        }]
+        },
+        options: {
+        scales: {
+            y: {
+            beginAtZero: true
+            }
         }
-      }
-    }
-  });
-
-  const url = "./datos.php?id=<?php echo $_GET['id']?>";
-  fetch(url)
-    .then(response => response.json())
-    .then(datos => mostrar(datos)) // Llama a la función mostrar con los datos recibidos
-    .catch(error => console.log(error)); // Corrige el error de escritura aquí
-
-  const mostrar = (articulos) => { // Usa el mismo nombre de variable que recibes en la función
-    articulos.forEach(element => {
-      myChart.data.labels.push(element.descripcion);
-      myChart.data.datasets[0].data.push(element.stock);
+        }
     });
 
-    myChart.update(); // Actualiza el gráfico después de agregar los datos
-  };
+    const url = "./datos.php?id=<?php echo $_GET['id']?>";
+    fecth(url)
+        .then(response => response.json())
+        .then(datos => mostrar(datos))
+        .cath( error => console.log(error))
+
+    const mostrar = (datos) => {
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: datos.matriculas,
+                datasets: [{
+                    label: 'Asistencias',
+                    data: datos.asistencias
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
 </script>
 </html>
