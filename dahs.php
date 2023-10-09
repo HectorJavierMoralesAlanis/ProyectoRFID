@@ -39,8 +39,6 @@
             $asistencias[$x] = asistencia_Matricula($alumno['Matricula'], $dao);
         }
         $x=$x+1;
-        echo "\n";
-        echo count($asistencias);
     }
     
     $matriculas = [];
@@ -100,10 +98,6 @@
                           <!-- Header del contenido-->
                           <div class="card-header">
                               <h3 class="card-title">Alumnos</h3>
-                              <!--Div para que el boton este a la derecha-->
-                              <div class="btn-group" style="float: right;">
-                                  <a href="./agregarInverntario.php?id=<?php echo $id?>" class="btn btn-block btn-success" style="float: right;">Agregar nuevo alumno</a>
-                              </div>
                           </div>
                           <!-- Cuerpo del formulario-->
                           <div class="card-body">
