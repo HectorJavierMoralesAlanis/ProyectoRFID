@@ -7,6 +7,7 @@
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
     $datos = [];
     $aux=0;
+    //Obtner arreglo sin repeticiones
     foreach($alumnos as $id){
         if(in_array($id["Matricula"],$datos)){
 
@@ -17,6 +18,21 @@
             $aux=$aux+1;
 
         }
+    }
+
+    foreach($datos as $matricula){
+        foreach($alumnos as $al){
+            while(in_array($matricula,$al)){
+                $asistencia[$matricula]=$asistencia+1;
+            }
+        }
+        echo $asistencia[$matricula];
+    }
+
+    //Funcion para contar asistencia
+    function asistencia_Matricula(){
+        $asist=new DAO();
+        $sentencia=""
     }
 ?>
 <!DOCTYPE html>
