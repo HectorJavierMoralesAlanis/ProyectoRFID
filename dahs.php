@@ -132,6 +132,7 @@
                         <div class="container">
                             <canvas id="myChart" width="400" height="400"></canvas>
                         </div>
+                        <h1>Grafico porcentaje</h1>
                         <div class="container">
                             <canvas id="myChart2" width="400" height="400"></canvas>
                         </div>
@@ -182,7 +183,7 @@
     });
     // Creamos un nuevo gráfico
     const ctx2 = document.getElementById("myChart2").getContext("2d");
-    const myChart2 = new Chart2(ctx, {
+    const myChart2 = new Chart2(ctx2, {
     type: "pie",
     data: {
         labels: nMatriculas.map(nmat => nmat),
