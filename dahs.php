@@ -110,6 +110,7 @@
 </div>
 </body>
 <script>
+    const alumnos = <?php echo json_encode($asistencia)?>
     var ctx = document.getElementById("myChart").getContext("2d");
     var myChart = new Chart(ctx, {
         type: 'bar',
@@ -144,7 +145,7 @@
             type: 'bar',
             data: {
                 labels: datos.matriculas,
-                datasets: [{
+        datasets: [{
                     label: 'Asistencias',
                     data: datos.asistencias
                 }]
