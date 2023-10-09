@@ -195,11 +195,12 @@
             ],
         },
         options: {
-        title: "Gráfica de asistencias",
-        width: 500,
-        height: 300,
-        backgroundColor: "#ffffff",
-        },
+            scales: {
+                y: {
+                beginAtZero: true
+                }
+            }
+        }
     });
 </script>
 </html>
