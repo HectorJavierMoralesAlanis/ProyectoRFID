@@ -39,7 +39,6 @@
             $asistencias[$alumno['Matricula']] = asistencia_Matricula($alumno['Matricula'], $dao);
         }
         echo "\n";
-        //echo $asistencias[$alumno['Matricula']];
         echo count($asistencias);
     }
 ?>
@@ -117,8 +116,15 @@
 </div>
 </body>
 <script>
-    const alumnos = <?php echo json_encode($asistencia)?>
+    const alumnos = <?php echo json_encode($asistencias)?>
     var ctx = document.getElementById("myChart").getContext("2d");
+    const asistenciaAlumnos = {
+        label: "Asistencia",
+        data: alumnos.map(alumno),
+        backgroundColor: 'rgba(237,78,136, 0.2)', // Color de fondo
+        borderColor: 'rgba(237,78,136, 1)', // Color del borde
+        borderWidth: 1, // Ancho del borde
+    }
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -140,34 +146,24 @@
         }
     });
 
-    const url = "./datos.php?id=<?php echo $_GET['id']?>";
-    fecth(url)
-        .then(response => response.json())
-        .then(datos => mostrar(datos))
-        .cath( error => console.log(error))
-
-    const mostrar = (datos) => {
-        var ctx = document.getElementById("myChart").getContext("2d");
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: datos.matriculas,
-        datasets: [{
-                    label: 'Asistencias',
-                    data: datos.asistencias
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
+    new Chart($grafica, {
+        type: 'line', // Tipo de gráfica
+        data: {
+            labels: etiquetas,
+            datasets: [
+                asistenciaAlumnos,
+                // Aquí más datos...
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
                         beginAtZero: true
                     }
-                }
-            }
-        });
-
-        console.log(datos.matriculas);
-        console.log(datos.asistencias);
-    }
+                }],
+            },
+        }
+    });
 </script>
 </html>
