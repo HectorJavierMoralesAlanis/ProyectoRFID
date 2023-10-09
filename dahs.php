@@ -23,7 +23,7 @@
 
     foreach($datos as $matricula){
         while(in_array($matricula,$alumnos)){
-            $asistencia[$matricula]=$asistencia[$matriucla]+1;
+            $asistencia[$matricula]=$asistencia[$matricula]+1;
         }
         echo '\n';
         echo $matricula;
