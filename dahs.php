@@ -30,14 +30,15 @@
     
         return $asistencias[0]['asistencias'];
     }
-
+    $x=0;
     $asistencias = [];
     foreach ($alumnos as $alumno) {
         if(in_array($alumno['Matricula'],$asistencias)){
 
         }else{
-            $asistencias[$alumno['Matricula']] = asistencia_Matricula($alumno['Matricula'], $dao);
+            $asistencias[$x] = asistencia_Matricula($alumno['Matricula'], $dao);
         }
+        $x=$x+1;
         echo "\n";
         echo count($asistencias);
     }
