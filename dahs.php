@@ -188,11 +188,17 @@
         labels: nMatriculas.map(nmat => nmat),
         datasets: [
         {
-            asitenciaPor,
-            backgroundColor: ["#ff0000", "#00ff00", "#0000ff"],
+            asistenciaPor,
         },
         ],
     },
+    options: {
+        scales: {
+            y: {
+            beginAtZero: true
+            }
+        }
+        }
     });
 </script>
 </html>
