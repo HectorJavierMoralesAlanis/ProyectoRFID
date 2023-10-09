@@ -196,7 +196,7 @@
             datasets: [
             {
                 asistenciaPor,
-                backgroundColor: [getRandomColor(), getRandomColor(), getRandomColor()],
+                backgroundColor: [getRandomColor()],
 
             },
             ],
