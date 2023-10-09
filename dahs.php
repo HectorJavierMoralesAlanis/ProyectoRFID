@@ -182,6 +182,11 @@
         }
         }
     });
+    function getRandomColor() {
+        const colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#ff00ff", "#00ffff"];
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
     // Creamos un nuevo gráfico
     var ctx2 = document.getElementById("myChart2").getContext("2d");
     var myChart2 = new Chart(ctx2, {
@@ -190,7 +195,9 @@
             labels: nMatriculas.map(nmat => nmat),
             datasets: [
             {
-                asistenciaPor
+                asistenciaPor,
+                backgroundColor: [getRandomColor(), getRandomColor(), getRandomColor()],
+
             },
             ],
         },
