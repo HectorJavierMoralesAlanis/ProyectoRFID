@@ -14,8 +14,8 @@
 
         }else{
             $datos[$aux]=$id['Matricula'];
-            echo $datos[$aux];
-            echo '\n';
+            //echo $datos[$aux];
+            //echo '\n';
             $aux=$aux+1;
 
         }
@@ -25,9 +25,11 @@
         while(in_array($matricula,$alumnos)){
             $asistencia[$matricula]=$asistencia+1;
         }
-        echo '.\n';
+        echo '\n';
         echo $matricula;
+        echo '\n';
         echo $asistencia[$matricula];
+        echo '\n';
     }
 
     //Funcion para contar asistencia
