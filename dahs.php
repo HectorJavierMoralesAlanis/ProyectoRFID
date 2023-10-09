@@ -34,6 +34,7 @@
     $asistencias = [];
     foreach ($alumnos as $alumno) {
         $asistencias[$alumno['Matricula']] = asistencia_Matricula($alumno['Matricula'], $dao);
+        echo $asistencias[$alumno['Matricula']];
     }
 ?>
 <!DOCTYPE html>
