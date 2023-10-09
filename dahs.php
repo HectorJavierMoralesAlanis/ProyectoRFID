@@ -120,11 +120,12 @@
     var ctx = document.getElementById("myChart").getContext("2d");
     const asistenciaAlumnos = {
         label: "Asistencia",
-        data: alumnos.map(alumno),
+        data: alumnos.map(alumno2 => parseInt(alumno2.asistencias)),
         backgroundColor: 'rgba(237,78,136, 0.2)', // Color de fondo
         borderColor: 'rgba(237,78,136, 1)', // Color del borde
         borderWidth: 1, // Ancho del borde
-    }
+    };
+
     var myChart = new Chart(ctx, {/*
         type: 'bar',
         data: {
