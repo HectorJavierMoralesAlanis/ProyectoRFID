@@ -22,6 +22,6 @@
     foreach($grupoArreglo as $id){
         $grupo= $id['grupo'];
     }
-    echo $clase;
+    echo $grupo;
     
 ?>
