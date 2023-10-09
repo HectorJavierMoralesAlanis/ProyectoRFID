@@ -113,10 +113,14 @@
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['Alumnos'],
-      datasets:[
-
-      ]
+      labels: [], // Inicializa las etiquetas vacías
+      datasets: [{
+        label: 'Alumnos',
+        data: [], // Inicializa los datos vacíos
+        backgroundColor: 'rgba(75, 192, 192, 0.2)', // Color de fondo
+        borderColor: 'rgba(75, 192, 192, 1)', // Color del borde
+        borderWidth: 1 // Ancho del borde
+      }]
     },
     options: {
       scales: {
@@ -125,17 +129,21 @@
         }
       }
     }
-  }); 
-  const url = "./datos.php?id=<?php echo $_GET['id']?>"; 
+  });
+
+  const url = "./datos.php?id=<?php echo $_GET['id']?>";
   fetch(url)
     .then(response => response.json())
-    .then(datos => mostrar(datos))
-    .catch( error => console.log(error))
-   const mostrar = (articulo) => {
-    articulos.forEach(element =>{
-        myChart.data['labels'].push(element.descripcion)
-        myChart.data['datasets'][0].data.push(element.stock)
+    .then(datos => mostrar(datos)) // Llama a la función mostrar con los datos recibidos
+    .catch(error => console.log(error)); // Corrige el error de escritura aquí
+
+  const mostrar = (articulos) => { // Usa el mismo nombre de variable que recibes en la función
+    articulos.forEach(element => {
+      myChart.data.labels.push(element.descripcion);
+      myChart.data.datasets[0].data.push(element.stock);
     });
-   }
+
+    myChart.update(); // Actualiza el gráfico después de agregar los datos
+  };
 </script>
 </html>
