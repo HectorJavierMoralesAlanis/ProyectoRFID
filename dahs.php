@@ -116,7 +116,7 @@
 </div>
 </body>
 <script>
-    const alumnos = <?php echo json_encode($asistencias)?>
+    const alumnos = <?php echo json_encode($asistencias);?>;
     console.log(alumnos);
     var ctx = document.getElementById("myChart").getContext("2d");
     const asistenciaAlumnos = {
