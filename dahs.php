@@ -164,11 +164,10 @@
     const asistenciaPor = {
         label: "Porcentaje",
         data: asistenciaPorcentaje.map(asisP => asisP),
-        backgroundColor: [getRandomColor()],
-        borderColor: 'rgba(237,78,136, 1)', // Color del borde
+        backgroundColor: asistenciaPorcentaje.map(asisP => getRandomColor()), // Color de fondo aleatorio para cada sector
+        borderColor: "rgba(237,78,136, 1)", // Color del borde
         borderWidth: 1, // Ancho del borde
     };
-
     var myChart = new Chart(ctx, {
         type: 'line', // Tipo de gráfica
         data: {
@@ -189,25 +188,19 @@
 
 
     // Creamos un nuevo gráfico
-    var ctx2 = document.getElementById("myChart2").getContext("2d");
-    var myChart2 = new Chart(ctx2, {
-        type: "pie",
+    var myChart = new Chart(ctx, {
+        type: "pie", // Tipo de gráfica circular
         data: {
             labels: nMatriculas.map(nmat => nmat),
-            datasets: [
-            {
-                asistenciaPor,
-
-            },
-            ],
+            datasets: [asistenciaPor],
         },
         options: {
             scales: {
-                y: {
-                beginAtZero: true
-                }
-            }
-        }
+            y: {
+                beginAtZero: true,
+            },
+            },
+        },
     });
 </script>
 </html>
