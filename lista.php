@@ -28,10 +28,10 @@
             //echo $matricula;
             $consulta3="SELECT clase FROM Alumnos WHERE Matricula=:matricula";
             $parametros3=array("matricula"=>$matricula);
-            $claseArreglo=$dao3->insertarConsulta($consulta3,$parametros3);
+            $claseArreglo=$dao3->ejecutarConsulta($consulta3,$parametros3);
             $consulta4="SELECT grupo FROM Alumnos WHERE Matricula=:matricula";
             $parametros4=array("matricula"=>$matricula);
-            $grupoArreglo=$dao4->insertarConsulta($consulta4,$parametros4);
+            $grupoArreglo=$dao4->ejecutarConsulta($consulta4,$parametros4);
             $fecha=date('Y-m-d H:i:s');
             //echo $fecha;
             foreach($claseArreglo as $id){
@@ -44,7 +44,7 @@
             $asistio=1;
             $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha,grupo,clase)"."VALUES (:matricula,:asistio,:fecha,:grupo,:clase)";
             $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha,"grupo"=>$grupo,"clase"=>$clase);
-            $pase = $dao2->insertarConsulta($consulta2,$parametros);
+            $pase = $dao2->ejecutarConsulta($consulta2,$parametros);
             break;
             //Se cambio la forma de verificar
         }else if($alumno['Contra']===$rfid){
