@@ -3,14 +3,23 @@
     include ('../DAO.php');
     $dao = new DAO();
     $daoMateria = new DAO();
-    $consulta = "SELECT * FROM Alumnos Where Matricula=:id";
+    $consulta = "SELECT * FROM Pase_de_lista Where Matricula=:id";
     $parametros = array("id"=>$_GET['matricula']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
-    echo "Es dificil";
-
+    
     foreach($alumnos as $alumno){
-       echo $alumno['Matricula'];
+        $clase = $alumno['clase'];
+    
+
+        $consultaClase = "SELECT * FROM Clases Where id=:clase";
+        $parametrosClase = array("clase"=>$clase);
+        $clasesArr = $daoMateria->ejecutarConsulta($consul);
+
+        foreach($claseArr as $id){
+            $alumno['clase']=$id['Nombre'];
+        }
     }
+
 /*
     $datos = [];
     $asistencia=[];
@@ -111,7 +120,7 @@
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
                                   <?php foreach ($alumnos as $alumno) { ?>
                                   <tr>
-                                      <td><?php echo $alumno['Matricula']; ?></td>
+                                      <td><?php echo $alumno['clase']; ?></td>
                                       <td><?php echo $alumno['Asistio']; ?></td>
                                       <td><?php echo $alumno['Fecha']; ?></td>
                                       <td><?php echo $alumno['hora'];?></td>
