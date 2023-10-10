@@ -9,6 +9,7 @@
         $parametros=array("matricula"=>$_POST['matricula'],"contra"=>$_POST['clave']);
         $resultados=$dao->ejecutarConsulta($consulta,$parametros);
         $resultados2=$dao2->ejecutarConsulta($consulta2,$parametros);
+        echo $resultados;
         /*
         if($resultados>=0){
             header("Location: http://134.122.22.100/materias.php?matricula=$matricula");
