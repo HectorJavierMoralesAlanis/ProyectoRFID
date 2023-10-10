@@ -8,12 +8,14 @@
         $parametros=array("matricula"=>$_POST['matricula'],"contra"=>$_POST['clave']);
         $resultados=$dao->ejecutarConsulta($consulta,$parametros);
         $resultados2=$dao2->ejecutarConsulta($consulta2,$parametros);
+        echo $resultados;
+        echo $resultados2;
         if($resultados>=0){
-            header("Location: http://134.122.22.100/materias.php?matricula=$matricula");
+            //header("Location: http://134.122.22.100/materias.php?matricula=$matricula");
         }else if($resultados2>=0){
-            header("Location: http://134.122.22.100/Alumnos/dahs.php?matricula=$matricula");
+            //header("Location: http://134.122.22.100/Alumnos/dahs.php?matricula=$matricula");
         }else{
-            echo "error";
+            //echo "error";
         }
     }
 ?>
