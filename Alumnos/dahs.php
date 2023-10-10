@@ -6,7 +6,7 @@
     $consulta = "SELECT * FROM Alumnos Where Matricula=:id";
     $parametros = array("id"=>$_GET['matricula']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
-    echo $alumnos;
+    echo "Es dificil";
 
     foreach($alumnos as $alumno){
        echo $alumno['Matricula'];
