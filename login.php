@@ -11,7 +11,7 @@
         if($resultados>=0){
             header("Location: http://134.122.22.100/materias.php?matricula=$matricula");
         }else if($resultados2>=0){
-            header("Location: ");
+            header("Location: http://134.122.22.100/Alumnos/dahs.php");
         }else{
             echo "error";
         }
