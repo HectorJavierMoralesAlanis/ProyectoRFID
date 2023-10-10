@@ -14,7 +14,7 @@
         $parametrosClase = array("clase"=>$clase);
         $clasesArr = $daoMateria->ejecutarConsulta($consultaClase,$parametrosClase);
 
-        foreach($claseArr as $id){
+        foreach($clasesArr as $id){
             $alumno['clase']=$id['nombre'];
         }
     }
