@@ -16,7 +16,7 @@
         }else{
 
             header("Location: http://134.122.22.100/login.php");
-            //echo "error";
+
         }
     }
 ?>
