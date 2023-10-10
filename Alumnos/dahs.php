@@ -2,16 +2,16 @@
 
     include ('../DAO.php');
     $dao = new DAO();
-    //$daoMateria = new DAO();
-    //$consulta = "SELECT * FROM Alumnos Where Matricula=:id";
-    //$parametros = array("id"=>$_GET['matricula']);
-    //$alumnos = $dao->insertarConsulta($consulta,$parametros);
-    /*echo $alumnos;
+    $daoMateria = new DAO();
+    $consulta = "SELECT * FROM Alumnos Where Matricula=:id";
+    $parametros = array("id"=>$_GET['matricula']);
+    $alumnos = $dao->insertarConsulta($consulta,$parametros);
+    echo $alumnos;
 
     foreach($alumnos as $alumno){
        echo $alumno['Matricula'];
     }
-    
+/*
     $datos = [];
     $asistencia=[];
     $aux=0;
