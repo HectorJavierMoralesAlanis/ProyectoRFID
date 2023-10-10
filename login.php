@@ -14,7 +14,9 @@
         }else if($resultados2>=0){
             header("Location: http://134.122.22.100/Alumnos/dahs.php?matricula=$matricula");
         }else{
-            echo "error";
+
+            header("Location: http://134.122.22.100/login.php");
+            //echo "error";
         }
     }
 ?>
