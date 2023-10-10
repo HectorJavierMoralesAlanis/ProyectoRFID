@@ -10,7 +10,6 @@
     foreach($alumnos as $alumno){
        echo $alumno['Matricula'];
     }
-    
     $datos = [];
     $asistencia=[];
     $aux=0;
