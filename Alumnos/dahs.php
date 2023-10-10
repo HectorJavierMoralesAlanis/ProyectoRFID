@@ -70,6 +70,7 @@
                                       <td><?php echo $alumno['clase']; ?></td>
                                       <td><?php echo $alumno['Asistio']; ?></td>
                                       <td><?php echo $alumno['Fecha']; ?></td>
+                                      
                                   </tr>
                                   <?php }?>
                               </table>
