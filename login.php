@@ -10,16 +10,16 @@
         $resultados=$dao->insertarConsulta($consulta,$parametros);
         $resultados2=$dao2->ejecutarConsulta($consulta2,$parametros);
         echo $resultados;
-        /*
-        if($resultados>=0){
+        
+        if($resultados>0){
             header("Location: http://134.122.22.100/materias.php?matricula=$matricula");
-        }else if($resultados2>=0){
+        }else if($resultados2>0){
             header("Location: http://134.122.22.100/Alumnos/dahs.php?matricula=$matricula");
         }else{
 
             header("Location: http://134.122.22.100/login.php");
 
-        }*/
+        }
         
     }
 ?>
