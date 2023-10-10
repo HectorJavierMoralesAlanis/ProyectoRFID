@@ -5,7 +5,7 @@
     $daoMateria = new DAO();
     $consulta = "SELECT * FROM Alumnos Where Matricula=:id";
     $parametros = array("id"=>$_GET['id']);
-    $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
+    $alumnos = $dao->insertarConsulta($consulta,$parametros);
     
     foreach($alumnos as $alumno)    {
        echo $alumno['Matricula'];
