@@ -7,6 +7,7 @@
     //$parametros = array("id"=>$_GET['matricula']);
     //$alumnos = $dao->insertarConsulta($consulta,$parametros);
     /*echo $alumnos;
+    
     foreach($alumnos as $alumno){
        echo $alumno['Matricula'];
     }
