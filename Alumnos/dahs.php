@@ -1,14 +1,20 @@
 <?php 
 
-    include ('./DAO.php');/*
+    include ('./DAO.php');
     $dao = new DAO();
-    $consulta = "SELECT * FROM Pase_de_lista Where clase=:id";
+    $daoMateria = new DAO();
+    $consulta = "SELECT * FROM Alumnos Where Matricula=:id";
     $parametros = array("id"=>$_GET['id']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
+    
+    foreach($alumnos as $alumno){
+       echo $alumno['Matricula'];
+    }
+    
     $datos = [];
     $asistencia=[];
     $aux=0;
-
+    /*
     //Funcion para contar asistencia
     function asistencia_Matricula($matricula, $dao) {
         $consulta = "SELECT COUNT(*) AS asistencias FROM Pase_de_lista WHERE Matricula = :matricula AND Asistio = 1";
@@ -104,7 +110,7 @@
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
                                   <?php foreach ($alumnos as $alumno) { ?>
                                   <tr>
-                                      <td><?php echo $alumno['Matricula']; ?></td>
+                                      <td><?php echo $alumno['Materia']; ?></td>
                                       <td><?php echo $alumno['Asistio']; ?></td>
                                       <td><?php echo $alumno['Fecha']; ?></td>
                                       <td><?php echo $alumno['hora'];?></td>
