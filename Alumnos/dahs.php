@@ -7,7 +7,7 @@
     $parametros = array("id"=>$_GET['id']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
     
-    foreach($alumnos as $alumno){
+    foreach($alumnos as $alumno)    {
        echo $alumno['Matricula'];
     }
     
