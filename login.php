@@ -7,7 +7,7 @@
         $consulta = "SELECT * FROM Profesores Where Matricula=:matricula and Contra=:contra";
         $consulta2 = "SELECT * FROM Alumnos Where Matricula=:matricula and Contra=:contra";
         $parametros=array("matricula"=>$_POST['matricula'],"contra"=>$_POST['clave']);
-        $resultados=$dao->ejecutarConsulta($consulta,$parametros);
+        $resultados=$dao->insertarConsulta($consulta,$parametros);
         $resultados2=$dao2->ejecutarConsulta($consulta2,$parametros);
         echo $resultados;
         /*
