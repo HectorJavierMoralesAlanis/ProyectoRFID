@@ -18,7 +18,6 @@
             $alumno['clase']=$id['nombre'];
         }
     }
-
 /*
     $datos = [];
     $asistencia=[];
