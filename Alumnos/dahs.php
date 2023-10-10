@@ -1,6 +1,6 @@
 <?php 
 
-    include ('DAO.php');
+    include ('./DAO.php');
     $dao = new DAO();
     //$daoMateria = new DAO();
     $consulta = "SELECT * FROM Alumnos Where Matricula=:id";
