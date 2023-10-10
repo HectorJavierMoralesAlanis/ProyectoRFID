@@ -42,7 +42,7 @@
                               <h3 class="card-title">Alumnos</h3>
                               <!--Div para que el boton este a la derecha-->
                               <div class="btn-group" style="float: right;">
-                                  <a href="./materias.php?matricula=<?php echo $_GET['matricula']?>" class="btn btn-block btn-success" style="float: right;">Regresar</a>
+                                  <a href="../login.php" class="btn btn-block btn-success" style="float: right;">Regresar</a>
                               </div>
                           </div>
                           <!-- Cuerpo del formulario-->
@@ -50,7 +50,7 @@
                               <table class="table table-bordered">
                                   <thead>
                                       <tr>
-                                          <th>Matricula</th>
+                                          <th>Materia</th>
                                           <th>Asistio</th>
                                           <th>Fecha de la asistencia</th>
                                       </tr>
@@ -70,7 +70,7 @@
                                       <td><?php echo $alumno['clase']; ?></td>
                                       <td><?php echo $alumno['Asistio']; ?></td>
                                       <td><?php echo $alumno['Fecha']; ?></td>
-                                      
+
                                   </tr>
                                   <?php }?>
                               </table>
