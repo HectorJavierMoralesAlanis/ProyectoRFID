@@ -49,7 +49,7 @@
             $matriculas[] = $alumno['Matricula'];
             $porcentajes[] = porcentaje_Asistencia($alumno['Matricula'], $dao);
         }
-    }    */
+    } */
 ?>
 <!DOCTYPE html>
 <html lang="en">
