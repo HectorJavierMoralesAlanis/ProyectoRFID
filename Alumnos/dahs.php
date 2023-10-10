@@ -6,14 +6,14 @@
     $consulta = "SELECT * FROM Pase_de_lista Where Matricula=:id";
     $parametros = array("id"=>$_GET['matricula']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
-    
+
     foreach($alumnos as $alumno){
         $clase = $alumno['clase'];
     
 
         $consultaClase = "SELECT * FROM Clases Where id=:clase";
         $parametrosClase = array("clase"=>$clase);
-        $clasesArr = $daoMateria->ejecutarConsulta($consul);
+        $clasesArr = $daoMateria->ejecutarConsulta($consultaClase,$parametrosClase);
 
         foreach($claseArr as $id){
             $alumno['clase']=$id['Nombre'];
