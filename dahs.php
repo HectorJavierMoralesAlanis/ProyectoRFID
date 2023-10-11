@@ -140,6 +140,7 @@
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
                                   <?php foreach ($semana as $dias){?>
+                                    <?php echo $dias?>
                                     <?php foreach ($alumnos as $alumnos) { ?>
                                     <tr>
                                     <?php $aux=$alumno['Fecha']?>
