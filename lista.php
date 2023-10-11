@@ -115,7 +115,7 @@
             $parametrosPase = array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha,"hora"=>$hora,"grupo"=>$grupo,"clase"=>$clase);
             $paseMaestro = $dao2Maestro->ejecutarConsulta($consultaPase,$parametrosPase);
             break;
-        }else if($maestro['IDcard']===$rfid){
+        }else if($maestro['Contra']===$rfid){
             echo "Ingresado";
 
             //Se crean los dao
