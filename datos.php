@@ -1,4 +1,5 @@
 <?php
+    include('DAO.php');
     $daoMaestro = new DAO();
     $consultaMaestro = "SELECT * FROM Profesores";
     $maestroLista = $dao->ejecutarConsulta($consultaMaestro);
