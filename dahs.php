@@ -107,11 +107,11 @@
                                   </thead>
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
-                                  <?php foreach ($lista as $id) { ?>
+                                  <?php foreach ($alumnos as $alumno) { ?>
                                   <tr>
-                                      <td><?php echo $id['Matricula']; ?></td>
-                                      <?php foreach($alumnos as $alumno){?>
-                                        <?php if (in_array($id['Matricula'],$alumno)){?>
+                                      <td><?php echo $alumno['Matricula']; ?></td>
+                                      <?php foreach($listas as $id){?>
+                                        <?php if (in_array($alumno['Matricula'],$id)){?>
                                             <td><?php echo $alumno['Asistio']; ?></td>
                                             <td><?php echo $alumno['Fecha']; ?></td>
                                             <td><?php echo $alumno['hora'];?></td>
@@ -119,7 +119,7 @@
                                         <?php } else {?>
                                             <td>0</td>
                                             <td>0</td>
-                                            <td>0/td>
+                                            <td>0</td>
                                             <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
                                         <?php }?>
                                       <?php }?>
