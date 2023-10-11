@@ -18,6 +18,8 @@
             echo $aux;
             if (in_array($id['Matricula'],$alumno)){
                 echo "<br/>";
+                echo $alumno['Matricula'];
+                echo "<br/>";
                 echo $alumno['Asistio']; 
                 echo $alumno['Fecha'];
                 echo $alumno['hora'];
