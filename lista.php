@@ -1,9 +1,11 @@
 <?php
     include ('DAO.php');
     $dao = new DAO();
+    $daoMaestro = new DAO();
     $consulta1 = "SELECT * FROM Alumnos";
+    $consultaMaestro = "SELECT * FROM Profesores";
     $alumnosLista = $dao->ejecutarConsulta($consulta1);
-
+    $maestroLista = $dao->ejecutarConsulta($consultaMaestro);
     if ($conn->connect_error){
         echo "Error: ".$connn->connect_error . PHP_EOL;
         die();
@@ -19,7 +21,7 @@
         echo "\nContra base ";
         echo $alumno['Contra'];
         */
-        if($alumno['IDcard'] === $rfid){
+        if($alumno['IDcard'] === $rfid || $alumno['IDcard']===$rfid){
             $dao2 = new DAO();
             $dao3 = new DAO();
             $dao4 = new DAO();
@@ -62,7 +64,9 @@
             $consulta4="SELECT grupo FROM Alumnos WHERE Matricula=:matricula";
             $parametros4=array("matricula"=>$matricula);
             $grupoArreglo=$dao4->ejecutarConsulta($consulta4,$parametros4);
-            $fecha=date('Y-m-d H:i:s');
+            date_default_timezone_set('America/Monterrey');
+            $fecha=date('Y-m-d');
+            $hora=date('H:i:s');
             //echo $fecha;
             foreach($claseArreglo as $id){
                 $clase = $id['clase'];
