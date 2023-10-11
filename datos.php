@@ -19,13 +19,13 @@
         $parametrosHora = array("matricula"=>$matricula);
         $resultadoHora = $daoHora->ejecutarConsulta($consultaHora,$parametrosHora);
         foreach($resultadoHora as $horas){
-            if($horas['hora']>=$hora && $horas['hora_final']<=$hora){
-                $grupo=$horas['grupo'];
-                $clase=$horas['id'];
-            }
+            //if($horas['hora']>=$hora && $horas['hora_final']<=$hora){
+            //    $grupo=$horas['grupo'];
+            //    $clase=$horas['id'];
+            //}
         }
-        echo $grupo;
-        echo $clase;
+        //echo $grupo;
+        //echo $clase;
         $asistio=1;
         $consultaPase = "INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha,hora,grupo,clase)"."VALUES (:matricula,:asistio,:fecha,:hora,:grupo,:clase)";
         $parametrosPase = array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha,"hora"=>$hora,"grupo"=>$grupo,"clase"=>$clase);
