@@ -83,6 +83,7 @@
         }else{
             echo "Ingreso";
             foreach($maestroLista as $maestro){
+                echo "Entro a maestros";
                 if($maestro['IDcard']===$rfid){
                     //Se crean los dao
                     $dao2Maestro = new DAO();
