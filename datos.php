@@ -17,7 +17,7 @@
         echo " ";
         
         foreach($alumnos as $alumno){
-            echo $aux;
+            echo "<br/>";
             $dia = getdate($alumno['Fecha']);
             echo $dia;
             break;
