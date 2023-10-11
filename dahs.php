@@ -143,7 +143,7 @@
                                     <?php foreach ($alumnos as $alumnos) { ?>
                                     <tr>
                                     <?php $aux=$alumno['Fecha']?>
-                                    <?php echo $dias?>
+                                    <td><?php echo $dias?><td>
                                     <?php $aux=semanaDias($alumno['Fecha'])?>
                                     <td><?php echo $alumno['Matricula']; ?></td>
                                         <?php if ($aux===$dias){?>
