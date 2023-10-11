@@ -111,7 +111,7 @@
                                   <tr>
                                       <td><?php echo $id['Matricula']; ?></td>
                                       <?php foreach($alumnos as $alumno){?>
-                                        <?php if (in_array($id['Matricula'],$alumnos)){?>
+                                        <?php if (in_array($id['Matricula'],$alumno)){?>
                                             <td><?php echo $alumno['Asistio']; ?></td>
                                             <td><?php echo $alumno['Fecha']; ?></td>
                                             <td><?php echo $alumno['hora'];?></td>
