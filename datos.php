@@ -10,12 +10,17 @@
     $lista = $daoLista->ejecutarConsulta($listaCompleta,$parametrosLista);
     $totalLista = count($lista);
     $aux=0;
+    
     foreach($lista as $id){
         echo " ";
         echo $id['Matricula'];
         echo " ";
+        
         foreach($alumnos as $alumno){
             echo $aux;
+            $dia = getdate($alumno['Fecha']);
+            print_r($dia);
+            break;
             if (in_array($id['Matricula'],$alumno)){
                 echo "<br/>";
                 echo $alumno['Matricula'];
@@ -31,5 +36,6 @@
             }
             $aux=$aux+1;
         }
+        break;
     }
 ?>
