@@ -81,7 +81,7 @@
             $pase = $dao2->ejecutarConsulta($consulta2,$parametros);
             break;
         }else{
-            
+            echo "Ingreso";
             foreach($maestroLista as $maestro){
                 if($maestro['IDcard']===$rfid){
                     //Se crean los dao
@@ -108,8 +108,6 @@
                     $parametrosPase = array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha,"hora"=>$hora,"grupo"=>$grupo,"clase"=>$clase);
                     $paseMaestro = $dao2Maestro->ejecutarConsulta($consultaPase,$parametrosPase);
                     break;
-                }else{
-                    $x=$x+1;
                 }
                 break;
             }//if ( $x ===count($alumnosListas)){
