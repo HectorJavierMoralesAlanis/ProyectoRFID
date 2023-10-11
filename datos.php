@@ -3,10 +3,10 @@
     $dao = new DAO();
     $daoLista = new DAO();
     $consulta = "SELECT * FROM Pase_de_lista Where clase=:id";
-    $parametros = array("id"=>$_GET['id']);
+    $parametros = array("id"=>1);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
     $listaCompleta = "SELECT * FROM Alumnos Where clase=:id";
-    $parametrosLista = array("id"=>$_GET['id']);
+    $parametrosLista = array("id"=>1);
     $lista = $daoLista->ejecutarConsulta($listaCompleta,$parametrosLista);
     $totalLista = count($lista);
     foreach($lista as $id){
