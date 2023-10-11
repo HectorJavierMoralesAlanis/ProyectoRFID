@@ -131,9 +131,10 @@
                               <table class="table table-bordered">
                                   <thead>
                                       <tr>
-                                          <th>Matricula</th>
-                                          <th>Asistio</th>
-                                          <th>Fecha de la asistencia</th>
+                                            <th>Dia</th>
+                                            <th>Matricula</th>
+                                            <th>Asistio</th>
+                                            <th>Fecha de la asistencia</th>
                                       </tr>
                                   </thead>
                                   <tbody>
@@ -142,6 +143,7 @@
                                     <?php foreach ($alumnos as $alumnos) { ?>
                                     <tr>
                                     <?php $aux=$alumno['Fecha']?>
+                                    <?php echo $dias?>
                                     <?php $aux=semanaDias($alumno['Fecha'])?>
                                     <td><?php echo $alumno['Matricula']; ?></td>
                                         <?php if ($aux===$dias){?>
