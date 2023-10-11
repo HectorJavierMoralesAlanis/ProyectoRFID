@@ -18,7 +18,7 @@
         foreach($alumnos as $alumno){
             echo "<br/>";
             $fechaEntera = strtotime($alumno['Fecha']);
-            $dia = date('d',$fechaEntera);
+            $dia = date('D',$fechaEntera);
             print_r ($dia);
             break;
             if (in_array($id['Matricula'],$alumno)){
