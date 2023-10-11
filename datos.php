@@ -14,6 +14,8 @@
         date_default_timezone_set('America/Monterrey');
         $fecha=date('Y-m-d');
         $hora=date('07:00:00');
+        $horaS = "$hora";
+        echo "Hora variable \n ".$horaS.".\n";
             //Se obtiene la hora de la materia para designar el grupo del maestro
         $consultaHora = "SELECT * FROM Clases Where matriculaMaestro=:matricula";
         $parametrosHora = array("matricula"=>$matricula);
@@ -24,7 +26,7 @@
             echo $horas['hora'];
             echo " hora final ";
             echo $horas['hora_final'];
-            
+
             if($horas['hora']>=$hora && $horas['hora_final']<=$hora){
                 echo "SI";
                 $grupo=$horas['grupo'];
