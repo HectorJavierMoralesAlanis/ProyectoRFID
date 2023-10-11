@@ -9,17 +9,18 @@
     $parametrosLista = array("id"=>1);
     $lista = $daoLista->ejecutarConsulta($listaCompleta,$parametrosLista);
     $totalLista = count($lista);
+    $aux=0;
     foreach($lista as $id){
         echo " ";
         echo $id['Matricula'];
         echo " ";
         foreach($alumnos as $alumno){
             if (in_array($id['Matricula'],$alumno)){
-                echo "-----------";
+                echo "<br/>";
                 echo $alumno['Asistio']; 
                 echo $alumno['Fecha'];
                 echo $alumno['hora'];
-                echo "-----------";
+                echo "<br/>";
             }else {
                 echo "sick love";
             }
