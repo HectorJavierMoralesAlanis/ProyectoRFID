@@ -26,7 +26,7 @@
             echo " hora final ";
             echo $horas['hora_final'];
             if($horas['hora']>=$hora || $hroas['hora_final']>=$hora){
-                echo "SI";
+                echo "Always";
                 $grupo=$horas['grupo'];
                 $clase=$horas['id'];
                 break;
