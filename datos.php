@@ -25,7 +25,7 @@
             echo $horas['hora'];
             echo " hora final ";
             echo $horas['hora_final'];
-            if($horas['hora']>=$hora && $horas['hora_final']<=$hora){
+            if($horas['hora']>=$horaS && $horas['hora_final']<=$horaS){
                 echo "SI";
                 $grupo=$horas['grupo'];
                 $clase=$horas['id'];
