@@ -2,9 +2,14 @@
 
     include ('DAO.php');
     $dao = new DAO();
+    $daoLista = new DAO();
     $consulta = "SELECT * FROM Pase_de_lista Where clase=:id";
     $parametros = array("id"=>$_GET['id']);
     $alumnos = $dao->ejecutarConsulta($consulta,$parametros);
+    $listaCompleta = "SELECT * FROM Alumnos Where clase=:id";
+    $parametrosLista = array("id"=>$_GET['id']);
+    $lista = $daoLista->ejecutarConsulta($listaCompleta,$parametrosLista);
+    $totalLista = count($lista);
     $datos = [];
     $asistencia=[];
     $aux=0;
@@ -102,14 +107,23 @@
                                   </thead>
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
-                                  <?php foreach ($alumnos as $alumno) { ?>
+                                  <?php foreach ($lista as $id) { ?>
                                   <tr>
-                                      <td><?php echo $alumno['Matricula']; ?></td>
-                                      <td><?php echo $alumno['Asistio']; ?></td>
-                                      <td><?php echo $alumno['Fecha']; ?></td>
-                                      <td><?php echo $alumno['hora'];?></td>
-                                      <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
-                                  </tr>
+                                      <td><?php echo $id['Matricula']; ?></td>
+                                      <?php foreach($alumnos as $alumno){?>
+                                        <?php if (in_array($id['Matricula'],$alumnos)){?>
+                                            <td><?php echo $alumno['Asistio']; ?></td>
+                                            <td><?php echo $alumno['Fecha']; ?></td>
+                                            <td><?php echo $alumno['hora'];?></td>
+                                            <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
+                                        <?php } else {?>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0/td>
+                                            <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
+                                        <?php }?>
+                                      <?php }?>
+                                    </tr>
                                   <?php }?>
                               </table>
                           </div>
