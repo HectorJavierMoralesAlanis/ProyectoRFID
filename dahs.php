@@ -112,9 +112,9 @@
                                       <td><?php echo $alumno['Matricula']; ?></td>
                                       <?php foreach($listas as $id){?>
                                         <?php if (in_array($alumno['Matricula'],$id)){?>
-                                            <td><?php echo $alumno['Asistio']; ?></td>
-                                            <td><?php echo $alumno['Fecha']; ?></td>
-                                            <td><?php echo $alumno['hora'];?></td>
+                                            <td><?php echo $id['Asistio']; ?></td>
+                                            <td><?php echo $id['Fecha']; ?></td>
+                                            <td><?php echo $id['hora'];?></td>
                                             <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
                                         <?php } else {?>
                                             <td>0</td>
