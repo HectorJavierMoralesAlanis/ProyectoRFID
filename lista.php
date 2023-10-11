@@ -81,6 +81,11 @@
             $pase = $dao2->ejecutarConsulta($consulta2,$parametros);
             break;
         }else{
+            $x=$x+1;
+        }
+
+    }
+    /*
             echo "Ingreso";
             foreach($maestroLista as $maestro){
                 echo "Entro a maestros";
@@ -116,5 +121,5 @@
             //}
         }
         
-    }
+    }*/
 ?>
