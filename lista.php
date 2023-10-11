@@ -32,7 +32,9 @@
             $consulta4="SELECT grupo FROM Alumnos WHERE Matricula=:matricula";
             $parametros4=array("matricula"=>$matricula);
             $grupoArreglo=$dao4->ejecutarConsulta($consulta4,$parametros4);
-            $fecha=date('Y-m-d H:i:s');
+            date_default_timezone_set('America/Monterrey');
+            $fecha=date('Y-m-d');
+            $hora=date('H:i:s');
             //echo $fecha;
             foreach($claseArreglo as $id){
                 $clase = $id['clase'];
@@ -42,8 +44,8 @@
             }
             
             $asistio=1;
-            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha,grupo,clase)"."VALUES (:matricula,:asistio,:fecha,:grupo,:clase)";
-            $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha,"grupo"=>$grupo,"clase"=>$clase);
+            $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha,hora,grupo,clase)"."VALUES (:matricula,:asistio,:fecha,:hora,:grupo,:clase)";
+            $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha,"hora"=>$hora,"grupo"=>$grupo,"clase"=>$clase);
             $pase = $dao2->ejecutarConsulta($consulta2,$parametros);
             break;
             //Se cambio la forma de verificar
