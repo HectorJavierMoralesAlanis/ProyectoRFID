@@ -25,10 +25,11 @@
             echo $horas['hora'];
             echo " hora final ";
             echo $horas['hora_final'];
-            if($horas['hora']==$horaS){
+            if($horas['hora']==$horas){
                 echo "SI";
                 $grupo=$horas['grupo'];
                 $clase=$horas['id'];
+                break;
             }
         }
         echo $grupo;
