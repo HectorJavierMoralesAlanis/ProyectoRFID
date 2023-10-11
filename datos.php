@@ -1,9 +1,9 @@
 <?php
     include('DAO.php');
-    
+
     $daoMaestro = new DAO();
     $consultaMaestro = "SELECT * FROM Profesores";
-    $maestroLista = $dao->ejecutarConsulta($consultaMaestro);
+    $maestroLista = $daoMaestro->ejecutarConsulta($consultaMaestro);
     foreach($maestroLista as $maestro){
         //echo "Entro a maestros";
         if($maestro['IDcard']===$rfid){
