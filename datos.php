@@ -19,10 +19,10 @@
         $parametrosHora = array("matricula"=>$matricula);
         $resultadoHora = $daoHora->ejecutarConsulta($consultaHora,$parametrosHora);
         foreach($resultadoHora as $horas){
-            echo "Entro";
+            echo " Hora inicio ";
             echo $horas['hora'];
-            echo "SOUn carnavall";
-            echo $hroas['hora_final'];
+            echo " hora final ";
+            echo $horas['hora_final'];
             if($horas['hora']>=$hora && $horas['hora_final']<=$hora){
                 echo "SI";
                 $grupo=$horas['grupo'];
