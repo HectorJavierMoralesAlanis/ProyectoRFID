@@ -10,7 +10,9 @@
     $lista = $daoLista->ejecutarConsulta($listaCompleta,$parametrosLista);
     $totalLista = count($lista);
     foreach($lista as $id){
+        echo " ";
         echo $id['Matricula'];
+        echo " ";
         foreach($alumnos as $alumno){
             if (in_array($id['Matricula'],$alumnos)){
                 echo $alumno['Asistio']; 
