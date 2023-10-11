@@ -15,10 +15,14 @@
         echo " ";
         foreach($alumnos as $alumno){
             if (in_array($id['Matricula'],$alumno)){
+                echo "-----------";
                 echo $alumno['Asistio']; 
                 echo $alumno['Fecha'];
                 echo $alumno['hora'];
-            } 
+                echo "-----------";
+            }else {
+                echo "sick love";
+            }
         }
     }
 ?>
