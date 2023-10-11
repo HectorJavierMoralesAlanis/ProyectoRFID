@@ -17,9 +17,9 @@
         echo " ";
         foreach($alumnos as $alumno){
             echo "<br/>";
-            $diademo = mktime(0,0,0,$alumno['Fecha']);
-            
-            $dia = getdate();
+//            $diademo = mktime(0,0,0,$alumno['Fecha']);
+
+            $dia = date('d',$alumno['Fecha']);
             print_r ($dia);
             break;
             if (in_array($id['Matricula'],$alumno)){
