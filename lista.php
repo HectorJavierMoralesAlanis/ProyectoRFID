@@ -26,6 +26,7 @@
             $dao3 = new DAO();
             $dao4 = new DAO();
             echo "Ingresado";
+            $var = "Ingresado";
             $matricula=$alumno['Matricula'];
             //echo $matricula;
             $consulta3="SELECT clase FROM Alumnos WHERE Matricula=:matricula";
@@ -86,7 +87,7 @@
 
     }
     foreach($maestroLista as $maestro){
-        echo "Entro a maestros";
+        //echo "Entro a maestros";
         if($maestro['IDcard']===$rfid){
             //Se crean los dao
             $dao2Maestro = new DAO();
