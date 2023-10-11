@@ -103,7 +103,7 @@
             $parametrosHora = array("matricula"=>$matricula);
             $resultadoHora = $daoHora->ejecutarConsulta($consultaHora,$parametrosHora);
             foreach($resultadoHora as $horas){
-                if($horas['hora']>=$hora && $horas['hora_final']<=$hora){
+                if($horas['hora']>=$hora || $horas['hora_final']<=$hora){
                     $grupo=$horas['grupo'];
                     $clase=$horas['id'];
                 }
