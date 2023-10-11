@@ -90,7 +90,7 @@
         //echo "Entro a maestros";
         if($maestro['IDcard']===$rfid){
 
-            echo "Ingreso";
+            echo "Ingresado";
             
             //Se crean los dao
             $dao2Maestro = new DAO();
