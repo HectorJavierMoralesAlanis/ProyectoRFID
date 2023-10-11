@@ -14,7 +14,7 @@
         echo $id['Matricula'];
         echo " ";
         foreach($alumnos as $alumno){
-            if (in_array($id['Matricula'],$alumnos)){
+            if (in_array($id['Matricula'],$alumno)){
                 echo $alumno['Asistio']; 
                 echo $alumno['Fecha'];
                 echo $alumno['hora'];
