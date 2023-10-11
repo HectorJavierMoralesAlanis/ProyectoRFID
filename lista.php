@@ -84,7 +84,6 @@
         }else{
             $x=$x+1;
         }
-
     }
     foreach($maestroLista as $maestro){
         //echo "Entro a maestros";
