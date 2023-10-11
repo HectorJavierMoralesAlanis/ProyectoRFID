@@ -57,7 +57,7 @@
             $dao3 = new DAO();
             $dao4 = new DAO();
             echo "Ingresado";
-            //$matricula=$alumno['Matricula'];
+            $matricula=$alumno['Matricula'];
             //echo $matricula;
             $consulta3="SELECT clase FROM Alumnos WHERE Matricula=:matricula";
             $parametros3=array("matricula"=>$matricula);
