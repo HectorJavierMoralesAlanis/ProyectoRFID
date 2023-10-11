@@ -18,8 +18,8 @@
         foreach($alumnos as $alumno){
             echo "<br/>";
 //            $diademo = mktime(0,0,0,$alumno['Fecha']);
-
-            $dia = date('d',$alumno['Fecha']);
+            $fechaEntera = strtotime($alumno['Fecha']);
+            $dia = date('d',$fechaEntera);
             print_r ($dia);
             break;
             if (in_array($id['Matricula'],$alumno)){
