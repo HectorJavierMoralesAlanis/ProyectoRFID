@@ -5,7 +5,7 @@
     $consulta1 = "SELECT * FROM Alumnos";
     $consultaMaestro = "SELECT * FROM Profesores";
     $alumnosLista = $dao->ejecutarConsulta($consulta1);
-    $maestroLista = $dao->ejecutarConsulta($consultaMaestro);
+    $maestroLista = $daoMaestro->ejecutarConsulta($consultaMaestro);
     if ($conn->connect_error){
         echo "Error: ".$connn->connect_error . PHP_EOL;
         die();
