@@ -10,11 +10,37 @@
     $parametrosLista = array("id"=>$_GET['id']);
     $lista = $daoLista->ejecutarConsulta($listaCompleta,$parametrosLista);
     $totalLista = count($lista);
+
     $i=0;
-    foreach($lista as $listas){
-        $arrlista[$i]=$listas['Matricula'];
-        $i=$i+1;
+    function semanaDias($dia){
+        $fechaEntera = strtotime($dia);
+        $dias=date('D',$fechaEntera);
+        switch($dias){
+            case "Mon":
+                $dias = "Lunes";
+                break;
+            case "Tue":
+                $dias = "Martes";
+                break;
+            case "Wed":
+                $dias = "Miercoles";
+                break;
+            case "Thu":
+                $dias = "Jueves";
+                break;
+            case "Fri":
+                $dias = "Viernes";
+                break;
+        }
+        return $dias;
     }
+
+    $semana[0]="Lunes";
+    $semana[1]="Martes";
+    $semana[2]="Miercoles";
+    $semana[3]="Jueves";
+    $semana[4]="Viernes";
+
     $datos = [];
     $asistencia=[];
     $aux=0;
@@ -112,14 +138,16 @@
                                   </thead>
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
-                                  <?php foreach ($alumnos as $alumno) { ?>
-                                  <tr>
-                                      <td><?php echo $alumno['Matricula']; ?></td>
-                                      <?php foreach($listas as $id){?>
-                                        <?php if (in_array($alumno['Matricula'],$id)){?>
-                                            <td><?php echo $id['Asistio']; ?></td>
-                                            <td><?php echo $id['Fecha']; ?></td>
-                                            <td><?php echo $id['hora'];?></td>
+                                  <?php foreach ($semana as $dias){?>
+                                    <?php foreach ($alumnos as $alumno) { ?>
+                                    <tr>
+                                    <?php $aux=$alumno['Fecha']?>
+                                    <?php $aux=semanaDias($alumno['Fecha'])?>
+                                    <td><?php echo $alumno['Matricula']; ?></td>
+                                        <?php if ($aux=$dias){?>
+                                            <td><?php echo $alumno['Asistio']; ?></td>
+                                            <td><?php echo $alumno['Fecha']; ?></td>
+                                            <td><?php echo $alumno['hora'];?></td>
                                             <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
                                         <?php } else {?>
                                             <td>0</td>
@@ -127,8 +155,8 @@
                                             <td>0</td>
                                             <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
                                         <?php }?>
-                                      <?php }?>
-                                    </tr>
+                                        </tr>
+                                    <?php }?>
                                   <?php }?>
                               </table>
                           </div>
