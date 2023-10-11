@@ -17,11 +17,12 @@
         echo " ";
         foreach($alumnos as $alumno){
             echo "<br/>";
-            
+
             $fechaEntera = strtotime($alumno['Fecha']);
             $dia = date('D',$fechaEntera);
             print_r ($dia);
             break;
+            
             if (in_array($id['Matricula'],$alumno)){
                 echo "<br/>";
                 echo $alumno['Matricula'];
