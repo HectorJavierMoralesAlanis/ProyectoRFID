@@ -17,7 +17,6 @@
         echo " ";
         foreach($alumnos as $alumno){
             echo "<br/>";
-//            $diademo = mktime(0,0,0,$alumno['Fecha']);
             $fechaEntera = strtotime($alumno['Fecha']);
             $dia = date('d',$fechaEntera);
             print_r ($dia);
