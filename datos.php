@@ -15,7 +15,6 @@
         echo " ";
         echo $id['Matricula'];
         echo " ";
-        
         foreach($alumnos as $alumno){
             echo "<br/>";
             $dia = getdate();
