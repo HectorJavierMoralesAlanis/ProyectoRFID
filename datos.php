@@ -19,7 +19,7 @@
         foreach($alumnos as $alumno){
             echo "<br/>";
             $dia = getdate();
-            echo $dia;
+            print_r ($dia);
             break;
             if (in_array($id['Matricula'],$alumno)){
                 echo "<br/>";
