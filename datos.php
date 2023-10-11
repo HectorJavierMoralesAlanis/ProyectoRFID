@@ -15,6 +15,7 @@
         echo $id['Matricula'];
         echo " ";
         foreach($alumnos as $alumno){
+            echo $aux;
             if (in_array($id['Matricula'],$alumno)){
                 echo "<br/>";
                 echo $alumno['Asistio']; 
@@ -22,8 +23,11 @@
                 echo $alumno['hora'];
                 echo "<br/>";
             }else {
+                echo "<br/>";
                 echo "sick love";
+                echo "<br/>";
             }
+            $aux=$aux+1;
         }
     }
 ?>
