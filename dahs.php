@@ -178,6 +178,7 @@
                                             <?php foreach($asistenciasTabla as $asisT){ ?>
                                                 <?php foreach($asisT as $asT){?>
                                                     <?php echo $asT?>
+                                                    
                                                     <?php if($asT === $semana[$j]){ ?>
                                                     <?php }else{ ?>
                                                         <td>0</td>
