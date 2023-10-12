@@ -191,7 +191,7 @@
                                                 <?php //echo $mat?>
                                                 <?php foreach($asistenciasTabla as $asisT){?>
                                                     <?php echo "</br>"?>
-                                                    <?php echo $asisT[$mat]?>
+                                                    <?php echo $asisT?>
                                                     <?php echo "</br>"?>
                                                     <?php if($asisT[$mat][$j] === $semana[$j]){?>
                                                         <?php echo "</br>"?>
