@@ -146,6 +146,7 @@
                                     <?php echo $semana[$i]?>
                                     <?php foreach ($alumnos as $alumno) { ?>
                                     <tr>
+                                        <?php $m=0; ?>
                                     <?php $aux=$alumno['Fecha']?>
                                     <?php $auxDia=semanaDias($alumno['Fecha'])?>
                                     <?php $auxSemana?>
@@ -156,7 +157,7 @@
                                         <td><?php echo $alumno['Fecha']; ?></td>
                                         <td><?php echo $alumno['hora'];?></td>
                                         <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
-                                        <?php $asistenciasTabla[$alumno['Matricula']]=$semana[$i];?>
+                                        <?php $asistenciasTabla[$alumno['Matricula']][$i]=$semana[$i];?>
                                             <?php /*if(in_array($alumno['Matricula'],$asistenciasMatriculas)){?>
                                             <?php }else { ?>
                                                 <?php $asistenciasMatriculas=$alumno['Matricula'];?>
@@ -167,7 +168,8 @@
                                     <?php }?>
                                 <?php }?>
                                 <?php print_r($asistenciasTabla)?>
-                                <?php echo $asistenciasTabla['2030103']?>
+                                <?php echo $asistenciasTabla['2030103'][0]?>
+                                <?php echo $asistenciasTabla['2030103'][1]?>
                                     <?php //echo "Pasa";?>
                                     <?php /*if($dias === "Viernes"){ ?>
                                         <?php echo "Entro";?> 
