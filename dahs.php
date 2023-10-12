@@ -169,6 +169,7 @@
                                         </tr>
                                     <?php }?>
                                 <?php //}?>
+                                <?php echo "Desde arr";?>
                                 <?php echo $matriculasAsistidas['2030103'][0]?>
 
                                     <?php echo "</br>"?>
@@ -182,19 +183,19 @@
                                     <?php //echo "Pasa";?>
                                     <?php if($semana[$i] === "Viernes"){ ?>
                                         <?php for($j = 0; $j<5 ; $j++){?>
-                                            <?php echo "</br>"?>
+                                            <?php /*echo "</br>"?>
                                             <?php echo "Dia"?>
                                             <?php echo $semana[$j]?>
-                                            <?php echo "</br>"?>
+                                            <?php echo "</br>"*/?>
                                             <?php foreach($matriculasAsistidas as $mat){?>
                                                 <?php //echo $j?>
                                                 <?php //echo $mat?>
                                                 <?php foreach($asistenciasTabla as $asisT){?>
                                                     <?php foreach($asisT as $id){?>
-                                                        <?php echo "</br>"?>
+                                                        <?php /*echo "</br>"?>
                                                         <?php echo "ASISTENCIAS"?>
                                                         <?php echo $id?>
-                                                        <?php echo "</br>"?>
+                                                        <?php echo "</br>"*/?>
                                                         <?php if($id === $semana[$j]){?>
                                                             <?php echo "</br>"?>
                                                             <?php echo "asisT"?>
