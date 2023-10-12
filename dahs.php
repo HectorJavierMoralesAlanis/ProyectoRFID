@@ -135,10 +135,13 @@
                                             <th>Matricula</th>
                                             <th>Asistio</th>
                                             <th>Fecha de la asistencia</th>
+                                            <th>Hora</th>
                                       </tr>
                                   </thead>
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
+                                  <?php $asistencias=[];
+                                    $asistenciasMatriculas=[]?>
                                   <?php foreach ($semana as $dias){?>
                                     <?php echo $dias?>
                                     <?php foreach ($alumnos as $alumno) { ?>
@@ -148,15 +151,38 @@
                                     <?php $auxSemana?>
                                     <?php if ($auxDia===$dias){?>
                                         <td><?php echo $dias;?></td>
-                                        <td><?php echo $alumno['Matricula']?>
+                                        <td><?php echo $alumno['Matricula']?></td>
                                         <td><?php echo $alumno['Asistio']; ?></td>
                                         <td><?php echo $alumno['Fecha']; ?></td>
                                         <td><?php echo $alumno['hora'];?></td>
                                         <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
-                                        
+                                        <?php $asistencias[$alumno['Matricula']]=$dias;
+                                            if(in_array($alumno['Matricula'],$asistenciasMatriculas)){
+
+                                            }else {$asistenciasMatriculas=$alumno['Matricula'];}?>
                                         <?php }?>
                                         </tr>
                                     <?php }?>
+                                    <?php 
+                                        if($dias == "Viernes"){
+                                            foreach($semana as $dias2){
+                                                foreach($asistencias as $asistencia){
+                                                    foreach($asistenciaMatriculas as $asiMatricula){
+                                                        if(in_array($asistencia,$semana)){
+
+                                                        }else{?>
+                                                            <td><?php echo $dias2?></td>
+                                                            <td><?php echo $asiMatricula?></td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                    <?php   }
+                                                    }
+                                                }
+                                            }
+                                            
+                                        }
+                                    ?>
                                   <?php }?>
                               </table>
                           </div>
