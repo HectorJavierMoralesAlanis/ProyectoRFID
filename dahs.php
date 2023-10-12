@@ -144,11 +144,11 @@
                                     <?php foreach ($alumnos as $alumno) { ?>
                                     <tr>
                                     <?php $aux=$alumno['Fecha']?>
-                                    <td><?php echo $dias?><td>
                                     <?php $auxDia=semanaDias($alumno['Fecha'])?>
                                     <?php $auxSemana?>
                                     <?php echo $alumno['Matricula']; ?></td>
                                     <?php if ($auxDia===$dias){?>
+                                        <?php echo $dias?>
                                         <td><?php echo $alumno['Asistio']; ?></td>
                                         <td><?php echo $alumno['Fecha']; ?></td>
                                         <td><?php echo $alumno['hora'];?></td>
