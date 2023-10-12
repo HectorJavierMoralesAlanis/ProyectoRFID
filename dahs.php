@@ -169,7 +169,6 @@
                                                 foreach($asistencias as $asistencia){
                                                     foreach($asistenciaMatriculas as $asiMatricula){
                                                         if(in_array($asistencia,$semana)){
-
                                                         }else{?>
                                                             <td><?php echo $dias2?></td>
                                                             <td><?php echo $asiMatricula?></td>
