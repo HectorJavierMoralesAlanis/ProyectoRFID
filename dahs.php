@@ -169,52 +169,26 @@
                                         </tr>
                                     <?php }?>
                                 <?php //}?>
-                                <?php echo "Desde arr";?>
-                                <?php echo $asistenciasTabla['2030103'][0]?>
-
-                                    <?php echo "</br>"?>
-                                    <?php echo  $asistenciasTabla['2030103'][2]?>
-                                    <?php echo "</br>"?>
-                                
-                                <?php ?>
-                                <?php //print_r ($asistenciasTabla)?>
-
-                                <?php /*echo $asistenciasTabla['2030103'][2]*/?>
                                     <?php //echo "Pasa";?>
                                     <?php if($semana[$i] === "Viernes"){ ?>
-                                        <?php for($j = 0; $j<5 ; $j++){?>
-                                            <?php /*echo "</br>"?>
-                                            <?php echo "Dia"?>
-                                            <?php echo $semana[$j]?>
-                                            <?php echo "</br>"*/?>
-                                            <?php foreach($matriculasAsistidas as $mat){?>
-                                                <?php //echo $j?>
-                                                <?php //echo $mat?>
-                                                <?php foreach($asistenciasTabla as $asisT){?>
-                                                    <?php foreach($asisT as $id){?>
-                                                        <?php /*echo "</br>"?>
-                                                        <?php echo "ASISTENCIAS"?>
-                                                        <?php echo $id?>
-                                                        <?php echo "</br>"*/?>
-                                                        <?php if($id === $semana[$j]){?>
-                                                            <?php echo "</br>"?>
-                                                            <?php echo "asisT"?>
-                                                            <?php echo $id[$mat][$j]?>
-                                                            <?php echo "Semana Dia"?>
-                                                            <?php echo $semana[$j]?>
-                                                            <?php echo "</br>"?>
-                                                        <?php } else {?>
-                                                            <td><?php echo $semana[$j]?></td>
-                                                            <td><?php echo $mat?></td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            </tr>
-                                                        <?php }?>
-                                                    <?php }?>
+                                        <?php foreach($matriculasAsistidas as $mat){?>
+                                            <?php for($j = 0; $j<5; $j++){?>
+                                            <?php //echo $j?>
+                                            <?php //echo $mat?>
+                                                <?php if($asistenciasTabla[$mat][$j]==$mat){?>
+                                                    <?php echo "Entro"?>
+                                                <?php }else {?>
+                                                    <td><?php echo $mat?></td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                </tr>
                                                 <?php }?>
                                             <?php }?>
                                         <?php }?>
+                                    <?php }?>
+                                <?php }?>
                                         <?php /*echo "Entro";?> 
                                         <?php for($j = 0; $j<5 ; $j++){ ?>
                                             <br>
@@ -235,8 +209,8 @@
                                                 <?php }?>
                                             <?php } ?>
                                         <?php } */?>
-                                    <?php }?>
-                                  <?php }?>
+                                    <?php //}?>
+                                  <?php //}?>
                               </table>
                           </div>
                           <h1>Gráfico de Ventas por Mes</h1>
