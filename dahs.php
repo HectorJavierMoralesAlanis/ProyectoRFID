@@ -162,7 +162,9 @@
                                         <?php }?>
                                         </tr>
                                     <?php }?>
-                                    <?php if($dias == "Viernes"){ ?>
+                                    <?php echo "Pasa";?>
+                                    <?php if($dias === "Viernes"){ ?>
+                                        <?php echo "Entro";?> 
                                         <?php foreach($semana as $dias2){ ?>
                                             <?php foreach($asistencias as $asistencia){ ?>
                                                 <?php foreach($asistenciaMatriculas as $asiMatricula){ ?>
