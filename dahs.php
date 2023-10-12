@@ -169,9 +169,9 @@
                                         </tr>
                                     <?php }?>
                                 <?php //}?>
-                                <?php print_r($matriculasAsistidas)?>
+                                <?php //print_r($matriculasAsistidas)?>
                                 <?php print_r ($asistenciasTabla)?>
-                                
+
                                 <?php /*echo $asistenciasTabla['2030103'][2]*/?>
                                     <?php //echo "Pasa";?>
                                     <?php if($semana[$i] === "Viernes"){ ?>
