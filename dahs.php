@@ -175,7 +175,7 @@
                                             <?php for($j = 0; $j<5; $j++){?>
                                             <?php //echo $j?>
                                             <?php //echo $mat?>
-                                                <?php if($asistenciasTabla[$mat][$j]==$mat){?>
+                                                <?php if($asistenciasTabla[$mat][$j]==$semana[$j]){?>
                                                     <?php echo "Entro"?>
                                                 <?php }else {?>
                                                     <td><?php echo $semana[$j]?></td>
