@@ -162,24 +162,22 @@
                                         <?php }?>
                                         </tr>
                                     <?php }?>
-                                    <?php 
-                                        if($dias == "Viernes"){
-                                            foreach($semana as $dias2){
-                                                foreach($asistencias as $asistencia){
-                                                    foreach($asistenciaMatriculas as $asiMatricula){
-                                                        if(in_array($asistencia,$semana)){
-                                                        }else{ ?>
-                                                            <td><?php echo $dias2?></td>
-                                                            <td><?php echo $asiMatricula?></td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                            <td>0</td>
-                                                    <?php  }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    ?>
+                                    <?php if($dias == "Viernes"){ ?>
+                                        <?php foreach($semana as $dias2){ ?>
+                                            <?php foreach($asistencias as $asistencia){ ?>
+                                                <?php foreach($asistenciaMatriculas as $asiMatricula){ ?>
+                                                    <?php if(in_array($asistencia,$semana)){ ?>
+                                                    <?php }else{ ?>
+                                                        <td><?php echo $dias2?></td>
+                                                        <td><?php echo $asiMatricula?></td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                    <?php  } ?>
+                                                <?php } ?>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    <?php }?>
                                   <?php }?>
                               </table>
                           </div>
