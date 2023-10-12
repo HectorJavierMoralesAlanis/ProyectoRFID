@@ -163,7 +163,7 @@
                                         </tr>
                                     <?php }?>
                                     <?php echo "Pasa";?>
-                                    <?php if($dias === "Viernes"){ ?>
+                                    <?php /*if($dias === "Viernes"){ ?>
                                         <?php echo "Entro";?> 
                                         <?php foreach($semana as $dias2){ ?>
                                             <?php foreach($asistencias as $asistencia){ ?>
@@ -179,7 +179,7 @@
                                                 <?php } ?>
                                             <?php } ?>
                                         <?php } ?>
-                                    <?php }?>
+                                    <?php }*/?>
                                   <?php }?>
                               </table>
                           </div>
