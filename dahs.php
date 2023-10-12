@@ -177,7 +177,7 @@
                                             <?php $semana[$j]?>
                                             <?php foreach($asistenciasTabla as $asisT){ ?>
                                                 <?php echo $asisT?>
-                                                <?php if($asisT === $semana[$j] ){ ?>
+                                                <?php if(in_array($asisT,$semana) ){ ?>
                                                 <?php }else{ ?>
                                                     <td>0</td>
                                                     <td>0</td>
