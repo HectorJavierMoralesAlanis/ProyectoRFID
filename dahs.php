@@ -161,6 +161,7 @@
                                             <?php }else { ?>
                                                 <?php $asistenciasMatriculas=$alumno['Matricula'];?>
                                             <?php }*/?>
+                                            
                                     <?php }?>
                                         </tr>
                                     <?php }?>
