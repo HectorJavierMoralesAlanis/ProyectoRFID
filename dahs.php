@@ -176,15 +176,17 @@
                                             <br>
                                             <?php $semana[$j]?>
                                             <?php foreach($asistenciasTabla as $asisT){ ?>
-                                                <?php echo $asisT?>
-                                                <?php if(in_array($asisT,$semana) ){ ?>
-                                                <?php }else{ ?>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
+                                                <?php foreach($asisT as $asT){?>
+                                                    <?php echo $asT?>
+                                                    <?php if($asT === $semana[$j]){ ?>
+                                                    <?php }else{ ?>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
                                                 <?php  } ?>
+                                                <?php }?>
                                             <?php } ?>
                                         <?php } ?>
                                     <?php }?>
