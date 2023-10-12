@@ -170,13 +170,14 @@
                                     <?php }?>
                                 <?php //}?>
                                 <?php //print_r($matriculasAsistidas)?>
-                                <?php print_r ($asistenciasTabla)?>
+                                <?php //print_r ($asistenciasTabla)?>
 
                                 <?php /*echo $asistenciasTabla['2030103'][2]*/?>
                                     <?php //echo "Pasa";?>
                                     <?php if($semana[$i] === "Viernes"){ ?>
                                         <?php for($j = 0; $j<5 ; $j++){?>
                                             <?php foreach($matriculasAsistidas as $mat){?>
+                                                <?echo $mat?>
                                                 <?php foreach($asistenciasTabla as $asisT){?>
                                                     <?php if($asisT[$mat] === $semana[$j]){?>
 
