@@ -168,7 +168,7 @@
                                 <?php }?>
 
                                 <?php print_r($asistenciasTabla)?>
-                                <?php echo $asistenciasTabla[0]?>
+                                <?php echo $asistenciasTabla?>
                                     <?php //echo "Pasa";?>
                                     <?php /*if($dias === "Viernes"){ ?>
                                         <?php echo "Entro";?> 
