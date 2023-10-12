@@ -53,6 +53,12 @@
     
         return $asistencias[0]['asistencias'];
     }
+    function inasistencia_Matricula($matricula, $dao){
+        $consulta  = "SELECT COUNT(*) AS asitencias FROM Pase_de_lista WHERE Matricula =:matricula AND Asistio = 0";
+        $parametros = array("matricula"=> $matricula);
+        $inasistencias = $dao->ejecutarConsulta($consulta,$parametros);
+        return $inasistencias[0]['inasitencias'];
+    }
     $x=0;
     $asistencias = [];
     foreach ($alumnos as $alumno) {
@@ -190,28 +196,6 @@
                                         <?php }?>
                                     <?php }?>
                                 <?php }?>
-                                        <?php /*echo "Entro";?> 
-                                        <?php for($j = 0; $j<5 ; $j++){ ?>
-                                            <br>
-                                            <?php echo $semana[$j]?>
-                                            <?php foreach($asistenciasTabla as $asisT){ ?>
-                                                <?php foreach($asisT as $asT){?>
-                                                    <?php echo $asT?>
-
-                                                    <?php if($asT === $semana[$j]){ ?>
-                                                    <?php }else{ ?>
-                                                    </br>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                <?php  } ?>
-                                                <?php }?>
-                                            <?php } ?>
-                                        <?php } */?>
-                                    <?php //}?>
-                                  <?php //}?>
                               </table>
                           </div>
                           <h1>Gráfico de Ventas por Mes</h1>
