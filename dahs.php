@@ -184,6 +184,7 @@
 
                                                     <?php if($asT === $semana[$j]){ ?>
                                                     <?php }else{ ?>
+                                                    </br>
                                                         <td>0</td>
                                                         <td>0</td>
                                                         <td>0</td>
