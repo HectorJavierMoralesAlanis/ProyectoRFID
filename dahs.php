@@ -146,9 +146,9 @@
                                     <?php $aux=$alumno['Fecha']?>
                                     <?php $auxDia=semanaDias($alumno['Fecha'])?>
                                     <?php $auxSemana?>
-                                    <?php echo $alumno['Matricula']; ?></td>
                                     <?php if ($auxDia===$dias){?>
-                                        <?php echo $dias?>
+                                        <td><?php echo $dias;?></td>
+                                        <td><?php echo $alumno['Matricula']?>
                                         <td><?php echo $alumno['Asistio']; ?></td>
                                         <td><?php echo $alumno['Fecha']; ?></td>
                                         <td><?php echo $alumno['hora'];?></td>
