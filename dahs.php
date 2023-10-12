@@ -169,7 +169,7 @@
                                 <?php }?>
                                 <?php print_r($asistenciasTabla)?>
                                 <?php echo $asistenciasTabla['2030103'][0]?>
-                                <?php echo $asistenciasTabla['2030103'][1]?>
+                                <?php echo $asistenciasTabla['2030103'][2]?>
                                     <?php //echo "Pasa";?>
                                     <?php /*if($dias === "Viernes"){ ?>
                                         <?php echo "Entro";?> 
