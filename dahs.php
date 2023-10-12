@@ -158,10 +158,10 @@
                                         <td><?php echo $alumno['hora'];?></td>
                                         <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
                                         <?php $asistenciasTabla[$alumno['Matricula']][$i]=$semana[$i];?>
-                                            <?php if(in_array($alumno['Matricula'],$asistenciasMatriculas)){?>
+                                            <?php /*if(in_array($alumno['Matricula'],$asistenciasMatriculas)){?>
                                             <?php }else { ?>
                                                 <?php $asistenciasMatriculas=$alumno['Matricula'];?>
-                                            <?php }?>
+                                            <?php }*/?>
                                     <?php }?>
                                         </tr>
                                     <?php }?>
