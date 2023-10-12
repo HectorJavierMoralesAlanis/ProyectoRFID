@@ -171,6 +171,7 @@
                                 <?php //}?>
                                 <?php foreach($matriculasAsistidas as $id){?>
                                     <?php echo $id?>
+                                    
                                 <?php }?>
                                 <?php //print_r ($asistenciasTabla)?>
 
