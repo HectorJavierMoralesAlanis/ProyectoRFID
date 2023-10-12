@@ -158,10 +158,10 @@
                                         <td><?php echo $alumno['hora'];?></td>
                                         <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
                                         <?php $asistenciasTabla[$alumno['Matricula']][$i]=$semana[$i];?>
-                                            <?php /*if(in_array($alumno['Matricula'],$asistenciasMatriculas)){?>
+                                            <?php if(in_array($alumno['Matricula'],$asistenciasMatriculas)){?>
                                             <?php }else { ?>
                                                 <?php $asistenciasMatriculas=$alumno['Matricula'];?>
-                                            <?php }*/?>
+                                            <?php }?>
                                     <?php }?>
                                         </tr>
                                     <?php }?>
@@ -170,20 +170,18 @@
                                 <?php echo $asistenciasTabla['2030103'][0]?>
                                 <?php echo $asistenciasTabla['2030103'][2]*/?>
                                     <?php //echo "Pasa";?>
-                                    <?php if($dias === "Viernes"){ ?>
+                                    <?php if($semana[$i] === "Viernes"){ ?>
                                         <?php echo "Entro";?> 
-                                        <?php foreach($semana as $dias2){ ?>
-                                            <?php foreach($asistencias as $asistencia){ ?>
-                                                <?php foreach($asistenciaMatriculas as $asiMatricula){ ?>
-                                                    <?php if(in_array($asistencia,$semana)){ ?>
-                                                    <?php }else{ ?>
-                                                        <td><?php echo $dias2?></td>
-                                                        <td><?php echo $asiMatricula?></td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                    <?php  } ?>
-                                                <?php } ?>
+                                        <?php for($j = 0; $j<5 ; $j++){ ?>
+                                            <?php foreach($asistenciasTabla as $asisT){ ?>
+                                                <?php if($asisT === $semana[$j] ){ ?>
+                                                <?php }else{ ?>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                    <td>0</td>
+                                                <?php  } ?>
                                             <?php } ?>
                                         <?php } ?>
                                     <?php }?>
