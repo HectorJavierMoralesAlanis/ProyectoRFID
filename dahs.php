@@ -190,23 +190,25 @@
                                                 <?php //echo $j?>
                                                 <?php //echo $mat?>
                                                 <?php foreach($asistenciasTabla as $asisT){?>
-                                                    <?php echo "</br>"?>
-                                                    <?php echo $asisT?>
-                                                    <?php echo "</br>"?>
-                                                    <?php if($asisT[$mat][$j] === $semana[$j]){?>
+                                                    <?php foreach($asisT as $id){?>
                                                         <?php echo "</br>"?>
-                                                        <?php echo "asisT"?>
-                                                        <?php echo $asisT[$mat][$j]?>
-                                                        <?php echo "Semana Dia"?>
-                                                        <?php echo $semana[$j]?>
+                                                        <?php echo $id?>
                                                         <?php echo "</br>"?>
-                                                    <?php } else {?>
-                                                        <td><?php echo $semana[$j]?></td>
-                                                        <td><?php echo $mat?></td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                        </tr>
+                                                        <?php if($id[$mat][$j] === $semana[$j]){?>
+                                                            <?php echo "</br>"?>
+                                                            <?php echo "asisT"?>
+                                                            <?php echo $id[$mat][$j]?>
+                                                            <?php echo "Semana Dia"?>
+                                                            <?php echo $semana[$j]?>
+                                                            <?php echo "</br>"?>
+                                                        <?php } else {?>
+                                                            <td><?php echo $semana[$j]?></td>
+                                                            <td><?php echo $mat?></td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            <td>0</td>
+                                                            </tr>
+                                                        <?php }?>
                                                     <?php }?>
                                                 <?php }?>
                                             <?php }?>
