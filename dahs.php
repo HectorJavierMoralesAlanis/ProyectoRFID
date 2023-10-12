@@ -166,7 +166,6 @@
                                         </tr>
                                     <?php }?>
                                 <?php }?>
-
                                 <?php print_r($asistenciasTabla)?>
                                 <?php echo $asistenciasTabla?>
                                     <?php //echo "Pasa";?>
