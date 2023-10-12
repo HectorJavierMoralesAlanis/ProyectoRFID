@@ -169,7 +169,7 @@
                                         </tr>
                                     <?php }?>
                                 <?php //}?>
-                                <?php //print_r($matriculasAsistidas)?>
+                                <?php print_r($matriculasAsistidas)?>
                                 <?php /*echo $asistenciasTabla['2030103'][0]?>
                                 <?php echo $asistenciasTabla['2030103'][2]*/?>
                                     <?php //echo "Pasa";?>
