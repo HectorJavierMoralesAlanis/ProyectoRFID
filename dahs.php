@@ -144,7 +144,7 @@
                                     $matriculasAsistidas=[];
                                     $aux1=0;?>
                                   <?php for($i=0;$i<5;$i++){?>
-                                    <?php echo $semana[$i]?>
+                                    <?php //echo $semana[$i]?>
                                     <?php foreach ($alumnos as $alumno) { ?>
                                     <tr>
                                         <?php $m=0; ?>
