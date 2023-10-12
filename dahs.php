@@ -170,10 +170,10 @@
                                     <?php }?>
                                 <?php //}?>
                                 <?php echo "Desde arr";?>
-                                <?php echo $sistenciasTabla['2030103'][0]?>
+                                <?php echo $asistenciasTabla['2030103'][0]?>
 
                                     <?php echo "</br>"?>
-                                    <?php echo  $matriculasAsistidas['2030103'][2]?>
+                                    <?php echo  $asistenciasTabla['2030103'][2]?>
                                     <?php echo "</br>"?>
                                 
                                 <?php ?>
