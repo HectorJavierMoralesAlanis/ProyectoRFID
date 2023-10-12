@@ -166,6 +166,7 @@
                                         </tr>
                                     <?php }?>
                                 <?php }?>
+                                
                                 <?php print_r($asistenciasTabla['2030103'])?>
                                 <?php echo $asistenciasTabla['2030103']?>
                                     <?php //echo "Pasa";?>
