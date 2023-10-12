@@ -142,7 +142,7 @@
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
                                   <?php $asistenciasTabla=[];
                                     $matriculasAsistidas=[];
-                                    $aux=0;?>
+                                    $aux1=0;?>
                                   <?php for($i=0;$i<5;$i++){?>
                                     <?php echo $semana[$i]?>
                                     <?php foreach ($alumnos as $alumno) { ?>
@@ -162,8 +162,8 @@
                                             <?php if(in_array($alumno['Matricula'],$matriculasAsistidas)){?>
                                                 <?php echo "igual" ?>
                                             <?php }else { ?>
-                                                <?php $matriculasAsistidas[$aux]=$alumno['Matricula'];?>
-                                                <?php $aux=$aux+1;?>
+                                                <?php $matriculasAsistidas[$aux1]=$alumno['Matricula'];?>
+                                                <?php $aux1=$aux1+1;?>
                                             <?php }?>
                                     <?php }?>
                                         </tr>
