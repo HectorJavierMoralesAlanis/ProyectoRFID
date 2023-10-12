@@ -160,7 +160,7 @@
                                         <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
                                         <?php $asistenciasTabla[$alumno['Matricula']][$i]=$semana[$i];?>
                                             <?php if(in_array($alumno['Matricula'],$matriculasAsistidas)){?>
-                                                <?php echo "igual" ?>
+                                                <?php //echo "igual" ?>
                                             <?php }else { ?>
                                                 <?php $matriculasAsistidas[$aux1]=$alumno['Matricula'];?>
                                                 <?php $aux1=$aux1+1;?>
@@ -176,7 +176,7 @@
                                             <?php //echo $j?>
                                             <?php //echo $mat?>
                                                 <?php if($asistenciasTabla[$mat][$j]==$semana[$j]){?>
-                                                    <?php echo "Entro"?>
+                                                    <?php //echo "Entro"?>
                                                 <?php }else {?>
                                                     <td><?php echo $semana[$j]?></td>
                                                     <td><?php echo $mat?></td>
