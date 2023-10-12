@@ -192,6 +192,7 @@
                                                 <?php foreach($asistenciasTabla as $asisT){?>
                                                     <?php foreach($asisT as $id){?>
                                                         <?php echo "</br>"?>
+                                                        <?php echo "ASISTENCIAS"?>
                                                         <?php echo $id?>
                                                         <?php echo "</br>"?>
                                                         <?php if($id[$mat][$j] === $semana[$j]){?>
