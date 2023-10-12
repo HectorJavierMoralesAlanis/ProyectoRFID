@@ -141,7 +141,7 @@
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
                                   <?php $asistenciasTabla=[];
-                                    $asistenciasMatriculas=[]?>
+                                    $matriculasAsistidas=[]?>
                                   <?php for($i=0;$i<5;$i++){?>
                                     <?php echo $semana[$i]?>
                                     <?php foreach ($alumnos as $alumno) { ?>
