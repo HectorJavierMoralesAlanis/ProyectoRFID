@@ -169,13 +169,13 @@
                                         </tr>
                                     <?php }?>
                                 <?php //}?>
-                                <?php foreach($matriculasAsistidas as $id){?>
+                                <?php echo $matriculasAsistidas['2030103'][0]?>
 
                                     <?php echo "</br>"?>
-                                    <?php echo $id?>
+                                    <?php echo  $matriculasAsistidas['2030103'][2]?>
                                     <?php echo "</br>"?>
                                 
-                                <?php }?>
+                                <?php ?>
                                 <?php //print_r ($asistenciasTabla)?>
 
                                 <?php /*echo $asistenciasTabla['2030103'][2]*/?>
