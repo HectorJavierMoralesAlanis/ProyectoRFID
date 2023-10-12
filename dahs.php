@@ -166,12 +166,12 @@
                                     <?php }?>
                                         </tr>
                                     <?php }?>
-                                <?php }?>
-                                <?php print_r($asistenciasTabla)?>
+                                <?php //}?>
+                                <?php /*print_r($asistenciasTabla)?>
                                 <?php echo $asistenciasTabla['2030103'][0]?>
-                                <?php echo $asistenciasTabla['2030103'][2]?>
+                                <?php echo $asistenciasTabla['2030103'][2]*/?>
                                     <?php //echo "Pasa";?>
-                                    <?php /*if($dias === "Viernes"){ ?>
+                                    <?php if($dias === "Viernes"){ ?>
                                         <?php echo "Entro";?> 
                                         <?php foreach($semana as $dias2){ ?>
                                             <?php foreach($asistencias as $asistencia){ ?>
@@ -187,8 +187,8 @@
                                                 <?php } ?>
                                             <?php } ?>
                                         <?php } ?>
-                                    <?php }*/?>
-                                  <?php //}?>
+                                    <?php }?>
+                                  <?php }?>
                               </table>
                           </div>
                           <h1>Gráfico de Ventas por Mes</h1>
