@@ -177,6 +177,7 @@
                                     <?php if($semana[$i] === "Viernes"){ ?>
                                         <?php for($j = 0; $j<5 ; $j++){?>
                                             <?php foreach($matriculasAsistidas as $mat){?>
+                                                <?php echo $j?>
                                                 <?php echo $mat?>
                                                 <?php foreach($asistenciasTabla as $asisT){?>
                                                     <?php if($asisT[$mat] === $semana[$j]){?>
