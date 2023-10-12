@@ -170,9 +170,11 @@
                                     <?php }?>
                                 <?php //}?>
                                 <?php foreach($matriculasAsistidas as $id){?>
+
                                     <?php echo "</br>"?>
                                     <?php echo $id?>
                                     <?php echo "</br>"?>
+                                
                                 <?php }?>
                                 <?php //print_r ($asistenciasTabla)?>
 
