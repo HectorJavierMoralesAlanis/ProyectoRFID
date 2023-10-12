@@ -169,7 +169,9 @@
                                         </tr>
                                     <?php }?>
                                 <?php //}?>
-                                <?php //print_r($matriculasAsistidas)?>
+                                <?php foreach($matriculasAsistidas as $id){?>
+                                    <?php echo $id?>
+                                <?php }?>
                                 <?php //print_r ($asistenciasTabla)?>
 
                                 <?php /*echo $asistenciasTabla['2030103'][2]*/?>
@@ -184,7 +186,7 @@
                                                         <?php echo "</br>"?>
                                                         <?php echo "asisT"?>
                                                         <?php echo $asisT[$mat][$j]?>
-                                                        <?php echo "Se,ama Dia"?>
+                                                        <?php echo "Semana Dia"?>
                                                         <?php echo $semana[$j]?>
                                                         <?php echo "</br>"?>
                                                     <?php } else {?>
