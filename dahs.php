@@ -180,14 +180,20 @@
                                                 <?php echo $j?>
                                                 <?php echo $mat?>
                                                 <?php foreach($asistenciasTabla as $asisT){?>
-                                                    <?php if($asisT[$mat] === $semana[$j]){?>
-
+                                                    <?php if($asisT[$mat][$j] === $semana[$j]){?>
+                                                        <?php echo "</br>"?>
+                                                        <?php echo "asisT"?>
+                                                        <?php echo $asisT[$mat][$j]?>
+                                                        <?php echo "Se,ama Dia"?>
+                                                        <?php echo $semana[$j]?>
+                                                        <?php echo "</br>"?>
                                                     <?php } else {?>
                                                         <td><?php echo $semana[$j]?></td>
                                                         <td><?php echo $mat?></td>
                                                         <td>0</td>
                                                         <td>0</td>
                                                         <td>0</td>
+                                                        </tr>
                                                     <?php }?>
                                                 <?php }?>
                                             <?php }?>
