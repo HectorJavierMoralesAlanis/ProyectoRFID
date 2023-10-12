@@ -174,11 +174,11 @@
                                         <?php echo "Entro";?> 
                                         <?php for($j = 0; $j<5 ; $j++){ ?>
                                             <br>
-                                            <?php $semana[$j]?>
+                                            <?php echo $semana[$j]?>
                                             <?php foreach($asistenciasTabla as $asisT){ ?>
                                                 <?php foreach($asisT as $asT){?>
                                                     <?php echo $asT?>
-                                                    
+
                                                     <?php if($asT === $semana[$j]){ ?>
                                                     <?php }else{ ?>
                                                         <td>0</td>
