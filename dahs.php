@@ -178,6 +178,7 @@
                                                 <?php if($asistenciasTabla[$mat][$j]==$mat){?>
                                                     <?php echo "Entro"?>
                                                 <?php }else {?>
+                                                    <td><?php echo $semana[$j]?></td>
                                                     <td><?php echo $mat?></td>
                                                     <td>0</td>
                                                     <td>0</td>
