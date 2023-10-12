@@ -166,6 +166,7 @@
                                         </tr>
                                     <?php }?>
                                 <?php }?>
+                                <?php print_r($asistenciasTabla)?>
                                     <?php //echo "Pasa";?>
                                     <?php /*if($dias === "Viernes"){ ?>
                                         <?php echo "Entro";?> 
