@@ -140,8 +140,8 @@
                                   </thead>
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
-                                  <?php $asistencias=[];
-                                    $asistenciasMatriculas=[];?>
+                                  <?php $asistenciasTabla=[];
+                                    $asistenciasMatriculas=[]?>
                                   <?php for($i=0;$i<5;$i++){?>
                                     <?php echo $semana[$i]?>
                                     <?php foreach ($alumnos as $alumno) { ?>
@@ -156,7 +156,7 @@
                                         <td><?php echo $alumno['Fecha']; ?></td>
                                         <td><?php echo $alumno['hora'];?></td>
                                         <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
-                                        <?php $asistencias[$alumno['Matricula']]=$dias;?>
+                                        <?php $asistenciasTabla[$alumno['Matricula']]=$dias;?>
                                             <?php /*if(in_array($alumno['Matricula'],$asistenciasMatriculas)){?>
                                             <?php }else { ?>
                                                 <?php $asistenciasMatriculas=$alumno['Matricula'];?>
