@@ -175,7 +175,21 @@
                                 <?php /*echo $asistenciasTabla['2030103'][2]*/?>
                                     <?php //echo "Pasa";?>
                                     <?php if($semana[$i] === "Viernes"){ ?>
-                                        <?php echo "Entro";?> 
+                                        <?php for($j = 0; $j<5 ; $j++){?>
+                                            <?php foreach($matriculasAsistidas as $mat){?>
+                                                <?php foreach($asistenciasTabla as $asisT){?>
+                                                    <?php if($asisT[$mat] === $semana[$j]){?>
+
+                                                    <?php } else {?>
+                                                        <td><?php echo $mat?></td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                    <?php }?>
+                                                <?php }?>
+                                            <?php }?>
+                                        <?php }?>
+                                        <?php /*echo "Entro";?> 
                                         <?php for($j = 0; $j<5 ; $j++){ ?>
                                             <br>
                                             <?php echo $semana[$j]?>
@@ -194,7 +208,7 @@
                                                 <?php  } ?>
                                                 <?php }?>
                                             <?php } ?>
-                                        <?php } ?>
+                                        <?php } */?>
                                     <?php }?>
                                   <?php }?>
                               </table>
