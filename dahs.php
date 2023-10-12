@@ -162,7 +162,8 @@
                                         <?php }?>
                                         </tr>
                                     <?php }?>
-                                    <?php echo "Pasa";?>
+                                <?php }?>
+                                    <?php //echo "Pasa";?>
                                     <?php /*if($dias === "Viernes"){ ?>
                                         <?php echo "Entro";?> 
                                         <?php foreach($semana as $dias2){ ?>
@@ -180,7 +181,7 @@
                                             <?php } ?>
                                         <?php } ?>
                                     <?php }*/?>
-                                  <?php }?>
+                                  <?php //}?>
                               </table>
                           </div>
                           <h1>Gráfico de Ventas por Mes</h1>
