@@ -145,19 +145,21 @@
                                     <tr>
                                     <?php $aux=$alumno['Fecha']?>
                                     <td><?php echo $dias?><td>
-                                    <?php $aux=semanaDias($alumno['Fecha'])?>
-                                    <td><?php echo $alumno['Matricula']; ?></td>
-                                        <?php if ($aux===$dias){?>
-                                            <td><?php echo $alumno['Asistio']; ?></td>
-                                            <td><?php echo $alumno['Fecha']; ?></td>
-                                            <td><?php echo $alumno['hora'];?></td>
-                                            <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
-                                        <?php } else {?>
+                                    <?php $auxDia=semanaDias($alumno['Fecha'])?>
+                                    <?php $auxSemana?>
+                                    <?php echo $alumno['Matricula']; ?></td>
+                                    <!--<?php #if ($auxDia===$dias){?>-->
+                                    <td><?php echo $alumno['Asistio']; ?></td>
+                                    <td><?php echo $alumno['Fecha']; ?></td>
+                                    <td><?php echo $alumno['hora'];?></td>
+                                    <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
+                                        <?php #} else {?>
+                                        <!--  <td>0</td>
                                             <td>0</td>
                                             <td>0</td>
-                                            <td>0</td>
-                                            <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
-                                        <?php }?>
+                                            <td class="align-middle"><a href="./borrar.php?id=<?php #echo $alumno['id']?>&clase=<?php #echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
+                                        -->
+                                        <?php #}?>
                                         </tr>
                                     <?php }?>
                                   <?php }?>
