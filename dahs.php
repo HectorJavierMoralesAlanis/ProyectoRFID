@@ -142,15 +142,15 @@
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
                                   <?php $asistencias=[];
                                     $asistenciasMatriculas=[]?>
-                                  <?php foreach ($semana as $dias){?>
-                                    <?php echo $dias?>
+                                  <?php for($i=0;$i<4;$i++){?>
+                                    <?php echo $semana[$i]?>
                                     <?php foreach ($alumnos as $alumno) { ?>
                                     <tr>
                                     <?php $aux=$alumno['Fecha']?>
                                     <?php $auxDia=semanaDias($alumno['Fecha'])?>
                                     <?php $auxSemana?>
-                                    <?php if ($auxDia===$dias){?>
-                                        <td><?php echo $dias;?></td>
+                                    <?php if ($auxDia===$semana[$i]){?>
+                                        <td><?php echo $semana[$i];?></td>
                                         <td><?php echo $alumno['Matricula']?></td>
                                         <td><?php echo $alumno['Asistio']; ?></td>
                                         <td><?php echo $alumno['Fecha']; ?></td>
