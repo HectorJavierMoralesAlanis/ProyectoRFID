@@ -173,7 +173,10 @@
                                     <?php if($semana[$i] === "Viernes"){ ?>
                                         <?php echo "Entro";?> 
                                         <?php for($j = 0; $j<5 ; $j++){ ?>
+                                            <br>
+                                            <?php $semana[$j]?>
                                             <?php foreach($asistenciasTabla as $asisT){ ?>
+                                                <?php echo $asisT?>
                                                 <?php if($asisT === $semana[$j] ){ ?>
                                                 <?php }else{ ?>
                                                     <td>0</td>
