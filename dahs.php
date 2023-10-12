@@ -195,7 +195,7 @@
                                                         <?php echo "ASISTENCIAS"?>
                                                         <?php echo $id?>
                                                         <?php echo "</br>"?>
-                                                        <?php if($id[$mat][$j] === $semana[$j]){?>
+                                                        <?php if($id === $semana[$j]){?>
                                                             <?php echo "</br>"?>
                                                             <?php echo "asisT"?>
                                                             <?php echo $id[$mat][$j]?>
