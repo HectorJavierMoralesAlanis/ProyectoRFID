@@ -156,11 +156,11 @@
                                         <td><?php echo $alumno['Fecha']; ?></td>
                                         <td><?php echo $alumno['hora'];?></td>
                                         <td class="align-middle"><a href="./borrar.php?id=<?php echo $alumno['id']?>&clase=<?php echo $alumno['clase']?>" method="POST" class="btn btn-info btn-block btn-sm">Eliminar</a></td>
-                                        <?php $asistencias[$alumno['Matricula']]=$dias;?>
+                                        <?php /*$asistencias[$alumno['Matricula']]=$dias;?>
                                             <?php if(in_array($alumno['Matricula'],$asistenciasMatriculas)){?>
                                             <?php }else { ?>
                                                 <?php $asistenciasMatriculas=$alumno['Matricula'];?>
-                                            <?php }?>
+                                            <?php }*/?>
                                     <?php }?>
                                         </tr>
                                     <?php }?>
