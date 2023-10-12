@@ -168,13 +168,13 @@
                                                 foreach($asistencias as $asistencia){
                                                     foreach($asistenciaMatriculas as $asiMatricula){
                                                         if(in_array($asistencia,$semana)){
-                                                        }else{?>
+                                                        }else{ ?>
                                                             <td><?php echo $dias2?></td>
                                                             <td><?php echo $asiMatricula?></td>
                                                             <td>0</td>
                                                             <td>0</td>
                                                             <td>0</td>
-                                                    <?php   }
+                                                    <?php  }
                                                     }
                                                 }
                                             }
