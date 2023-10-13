@@ -78,65 +78,29 @@
                           <div class="card-body">
                               <table class="table table-bordered">
                                   <thead>
-                                        <tr>
-                                            <th>Dia</th>
-                                            <th>Materia</th>
-                                            <th>Asistio</th>
-                                            <th>Fecha de la asistencia</th>
-                                            <th>Hora</th>
-                                        </tr>
+                                      <tr>
+                                          <th>Materia</th>
+                                          <th>Asistio</th>
+                                          <th>Fecha de la asistencia</th>
+                                      </tr>
                                   </thead>
                                   <tbody>
                                   <!-- EXTRAE TODOS LOS DATOS DE LA TABLA EN LA BASE DE DATOS Y LOS MUESTRA AQUI -->
-                                  <?php $asistenciasTabla=[];
-                                    $matriculasAsistidas=[];
-                                    $aux1=0;?>
-                                    <?php for($i=0;$i<5;$i++){?>
-                                        <?php foreach ($alumnos as $alumno) {
-                                            $aux=$alumno['Fecha'];
-                                            $auxDia=semanaDias($alumnos['Fecha']);
-                                            if($auxDia === $semana[$i]){
-                                                $clase = $alumno['clase'];
-                                                $consultaClase = "SELECT * FROM Clases Where id=:clase";
-                                                $parametrosClase = array("clase"=>$clase);
-                                                $claseArr = $daoMateria->ejecutarConsulta($consultaClase,$parametrosClase);
-                                                    foreach($claseArr as $id){
-                                                        $alumno['clase'] = $id['nombre'];
-                                                    }
-                                                ?>
-                                            <tr>
-                                                <td><?php echo $semana[$i]?></td>
-                                                <td><?php echo $alumno['clase']; ?></td>
-                                                <td><?php echo $alumno['Asistio']; ?></td>
-                                                <td><?php echo $alumno['Fecha']; ?></td>
-                                                <td><?php echo $alumno['hora'];?></td>
-                                            </tr>
-                                                <?php $asistenciasTabla[$alumno['Matricula']][$i]=$semana[$i];?>
-                                                <?php if(in_array($alumno['Matricula'],$matriculasAsistidas)){
-                                                    
-                                                }else{
-                                                    $matriculasAsistidas[$aux1]=$alumnos['Matricula'];
-                                                    $aux1=$aux1+1;
-                                                }?>
-                                            <?php }?>
-                                        <?php }?>
-                                        <?php if($semana[$i]==="Viernes"){?>
-                                            <?php foreach($matriculasAsistidas as $mat){?>
-                                                <?php for($j = 0; $j<5; $j++){?>
-                                                    <?php if($asistenciasTablas[$mat][$j]===$semana[$j]){?>
-                                                    <?php }else{?>
-                                                        <td><?php echo $semana[$j]?></td>
-                                                        <td><?php echo $mat?></td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                        <td>0</td>
-                                                    </tr>    
-                                                    <?php }?>
-                                                <?php }?>
-                                            <?php }?>
+                                  <?php foreach ($alumnos as $alumno) { 
+                                    $clase = $alumno['clase'];
+                                    $consultaClase = "SELECT * FROM Clases Where id=:clase";
+                                    $parametrosClase = array("clase"=>$clase);
+                                    $claseArr = $daoMateria->ejecutarConsulta($consultaClase,$parametrosClase);
+                                        foreach($claseArr as $id){
+                                            $alumno['clase'] = $id['nombre'];
+                                        }
+                                    ?>
+                                  <tr>
+                                      <td><?php echo $alumno['clase']; ?></td>
+                                      <td><?php echo $alumno['Asistio']; ?></td>
+                                      <td><?php echo $alumno['Fecha']; ?></td>
 
-                                        <?php }?>
+                                  </tr>
                                   <?php }?>
                               </table>
                           </div>

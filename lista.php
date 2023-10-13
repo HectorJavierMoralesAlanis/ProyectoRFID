@@ -14,6 +14,24 @@
     //$password=$_POST["password"];
     //echo $alumnosLista;
     $x=0;
+
+    function nombreClase($id){
+        $daoN = new DAO();
+        $consulta="SELECT nombre FROM Clase Where id=:id";
+        $parametros=array("id"=>$id);
+        $nombre=$daoN->ejecutarConsulta($consulta,$parametros);
+        return $nombre;
+    }
+    
+    function horaAlumno($hora,$nombre){
+        $daoHora = new DAO();
+        $consultaHora = "SELECT * FROM Clases Where nombre=:nombre";
+        $parametrosHora = array("nombre"=>$nombre);
+        $resultadoHora = $daoHora->ejecutarConsulta($consultaHora,$parametrosHora);
+
+        return $resultadoHora;
+        
+    }
     foreach ($alumnosLista as $alumno){
         /*
         echo "\ncontra mandada ";
@@ -45,7 +63,12 @@
             foreach($grupoArreglo as $id){
                 $grupo= $id['grupo'];
             }
-            
+            foreach($resultadoHora as $horas){
+                if($horas['hora']>=$hora || $horas['hora_final']<=$hora){
+                    $grupo=$horas['grupo'];
+                    $clase=$horas['id'];
+                }
+            }
             $asistio=1;
             $consulta2="INSERT INTO Pase_de_lista (Matricula,Asistio,Fecha,hora,grupo,clase)"."VALUES (:matricula,:asistio,:fecha,:hora,:grupo,:clase)";
             $parametros=array("matricula"=>$matricula,"asistio"=>$asistio,"fecha"=>$fecha,"hora"=>$hora,"grupo"=>$grupo,"clase"=>$clase);
